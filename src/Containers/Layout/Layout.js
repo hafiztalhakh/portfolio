@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 //Components
 import Navbar from '../../Components/Navbar';
+import About from '../Screens/About';
 
 const styles = makeStyles(theme => ({
     desktop: {
@@ -30,8 +31,8 @@ function Layout() {
 
     return (
         <Fragment>
-                <Navbar />
-
+            <Navbar />
+            <About />
         </Fragment >
     );
 }
