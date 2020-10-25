@@ -34,12 +34,12 @@ function Layout() {
     return (
         <Fragment>
             <Navbar />
-           <div style={{height: 20}} />
+           <div style={{height: 80}} />
             <About />
-            <div style={{height: 50}} />
+            <div style={{height: 100}} />
             <Skills />
             <div style={{height: 50}} />
-            <Education />
+            {/* <Education /> */}
         </Fragment >
     );
 }

@@ -45,42 +45,50 @@ const Skills = () => {
                     <Grid container spacing={3}>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
-                                <FaHtml5 />
+                                <FaHtml5 className="skill-icon" />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <FaCss3Alt />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <IoLogoJavascript />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <FaReact />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <FaNode />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <DiMongodb />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <FaReact />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
                             <Paper elevation={3} className="paper">
                                 <RiFlutterLine />
+                                <h4>HTML</h4>
                             </Paper>
                         </Grid>
                     </Grid>
