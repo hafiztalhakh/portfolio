@@ -1,8 +1,13 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
+
+//React Router
+import { withRouter } from 'react-router-dom';
 
 // Website Layout
 import Layout from './Layout/Layout';
+
+// Stylesheet
+import './App.css';
 
 class App extends Component {
 
@@ -15,4 +20,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default withRouter(App);
