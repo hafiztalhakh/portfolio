@@ -34,6 +34,10 @@ function Layout() {
             <Navbar />
             <br/><br/>
             <About />
+            <br/><br/>
+            <About />
+            <br/><br/>
+            <About />
         </Fragment >
     );
 }
