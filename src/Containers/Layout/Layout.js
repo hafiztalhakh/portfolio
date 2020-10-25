@@ -8,8 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 //Components
 import Navbar from '../../Components/Navbar';
-import MobileNavigationsMenu from '../../Components/MobileNavigationMenu';
-import Footer from '../../Components/Footer';
+// import MobileNavigationsMenu from '../../Components/MobileNavigationMenu';
+// import Footer from '../../Components/Footer';
 
 const styles = makeStyles(theme => ({
     desktop: {
@@ -30,43 +30,16 @@ function Layout() {
 
     const classes = styles();
 
-    useEffect(() => {
-
-        let navElement = document.getElementById('my-navbar');
-        let logoElement = document.getElementById('my-logo');
-
-        const listenScroll = document.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            if (winScroll > 99) {
-                navElement.classList.add("fixed-nav");
-                navElement.classList.remove("transparent-nav");
-                logoElement.classList.add("blue-logo");
-                logoElement.classList.remove("white-logo");
-            }
-            else if (winScroll < 99) {
-                navElement.classList.add("transparent-nav");
-                navElement.classList.remove("fixed-nav");
-                logoElement.classList.add("white-logo");
-                logoElement.classList.remove("blue-logo");
-            }
-        });
-
-        return () => {
-            document.removeEventListener("scroll", listenScroll)
-        }
-    }, []);
-
-
     return (
         <Fragment>
-            <div className={classes.mobile}>
+            {/* <div className={classes.mobile}>
                 <MobileNavigationsMenu />
-            </div>
+            </div> */}
             <div className={classes.desktop}>
                 <Navbar />
             </div>
 
-            <Footer />
+            {/* <Footer /> */}
         </Fragment >
     );
 }

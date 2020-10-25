@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react';
 import { withRouter } from 'react-router-dom';
 
 // Website Layout
-import Layout from './Layout/Layout';
+import Layout from './Containers/Layout/Layout';
 
 // Stylesheet
 import './App.css';

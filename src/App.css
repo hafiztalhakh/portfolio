@@ -26,14 +26,6 @@ body {
 
 /* Navbar */
 
-.transparent-nav {
-  background-color: transparent !important;
-  color: #fff !important;
-  position: absolute !important;
-  box-shadow: none !important;
-  margin-top: 12px !important;
-}
-
 .fixed-nav {
   background-color: #fff !important;
   color: #000 !important;
@@ -44,26 +36,21 @@ body {
 
 .logo-box {
   margin: 0;
-  padding: 0px 0px 0px 30px;
+  padding: 0px;
   display: inline-block;
 }
 
-.white-logo {
-  font-family: 'Merienda One', cursive !important;
+.developer-name {
+  font-family: Brush Script MT !important;
+  font-size: 30px !important;
   color: #fff !important;
-  font: bold !important;
-  text-decoration: underline !important;
-}
-
-.blue-logo {
-  font-family: 'Merienda One', cursive !important;
-  color: #0095FF !important;
   font: bold !important;
   text-decoration: underline !important;
 }
 
 .navigations {
   float: right !important;
+  margin-top: 10px;
 }
 
 .navigations ul {
@@ -80,7 +67,7 @@ body {
 
 .navLinks {
   display: block;
-  color: inherit;
+  color: #fff;
   padding: 0px 12px;
   text-decoration: none;
   text-transform: uppercase;
@@ -90,14 +77,14 @@ body {
 }
 
 .navLinks:hover {
-  color: #0095FF;
+  color: #fff;
   text-decoration: none;
 }
 
 .underline:after {
   display: block;
   content: '';
-  border-bottom: solid 3px #0095FF;
+  border-bottom: solid 3px #ffff00;
   transform: scaleX(0);
   transition: transform 250ms ease-in-out;
   transform-origin: 100% 50%;
@@ -109,7 +96,6 @@ body {
 }
 
 /* Navbar */
-
 
 .title {
   font-family: 'Fondamento', cursive;
