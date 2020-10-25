@@ -8,8 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 //Components
 import Navbar from '../../Components/Navbar';
-// import MobileNavigationsMenu from '../../Components/MobileNavigationMenu';
-// import Footer from '../../Components/Footer';
 
 const styles = makeStyles(theme => ({
     desktop: {
@@ -32,14 +30,8 @@ function Layout() {
 
     return (
         <Fragment>
-            {/* <div className={classes.mobile}>
-                <MobileNavigationsMenu />
-            </div> */}
-            <div className={classes.desktop}>
                 <Navbar />
-            </div>
 
-            {/* <Footer /> */}
         </Fragment >
     );
 }
