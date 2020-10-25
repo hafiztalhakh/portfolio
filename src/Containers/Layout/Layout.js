@@ -32,6 +32,7 @@ function Layout() {
     return (
         <Fragment>
             <Navbar />
+            <br/><br/>
             <About />
         </Fragment >
     );
