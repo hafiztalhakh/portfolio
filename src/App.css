@@ -166,3 +166,11 @@ body {
   color: #000 !important;
   box-shadow: 1px 2px 3px rgb(53, 52, 52);
 }
+
+.paper{
+  height: 150px;
+  width: auto;
+  padding: 20px;
+  background-color: #171717 !important;
+  box-shadow: 10px 20px 30px #0000004D !important;
+}
