@@ -108,10 +108,10 @@ body {
   word-spacing: 9px;
   transform: rotate(-90deg);
   top: 230px;
-  left: -45px;
+  left: -40px;
 }
 
-.title:after {
+.title-left:after {
   margin: 20px auto 0px;
 }
 
@@ -125,8 +125,24 @@ body {
   margin-top: 5px;
 }
 
-.text-align {
+.title {
+  color: #ffff00;
+  font-size: 36px;
+}
+
+.text-info {
+  color: #9F9F9F;
+  font-size: 16px;
+  letter-spacing: 0.48;
+  line-height: 1.8;
+}
+
+.center-text {
   text-align: center !important;
+}
+
+.left-text {
+  text-align: left !important;
 }
 
 .img-responsive {

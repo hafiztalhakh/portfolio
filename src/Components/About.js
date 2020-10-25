@@ -30,14 +30,14 @@ const About = () => {
 
     return (
         <Container maxWidth="lg">
+            <h1 className='title-left'>Introduction</h1>
             <Grid contaienr spacing={3}>
                 <Grid item md={6}>
                     <div>
-                        <h5 className='title-left'>Introduction</h5>
                         <div className={classes.textContainer}>
                             <h1 className={classes.hi}>Hi!</h1>
                             <h4>My name is <span className={classes.developeName}>Talha Khalid</span></h4>
-                            <p className={classes.text}>
+                            <p className="text-info left-text">
                                 I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software engineering and I will graduate in the year 2021. I am Ui Ux designer and currently working as a freelancer.
                             </p>
                             <Button
