@@ -37,7 +37,7 @@ const Skills = () => {
 
     return (
         <Container maxWidth="lg">
-            <h1 className='title-left' style={{ marginLeft: 53, top: 325 }}>Skills</h1>
+            <h1 className='title-left' style={{ marginLeft: 50, top: 325 }}>Skills</h1>
             <div className={classes.textContainer}>
                 <Container maxWidth="md">
                     <h1 className="title center-text">What I do</h1>
