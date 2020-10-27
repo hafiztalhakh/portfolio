@@ -38,8 +38,9 @@ function Layout() {
             <About />
             <div style={{height: 100}} />
             <Skills />
-            <div style={{height: 50}} />
-            {/* <Education /> */}
+            <div style={{height: 100}} />
+            <Education />
+            <div style={{height: 500}} />
         </Fragment >
     );
 }

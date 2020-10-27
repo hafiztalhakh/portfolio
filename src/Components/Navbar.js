@@ -14,7 +14,9 @@ const Navbar = () => {
                         <div className="logo-box">
                             <Link style={{ textDecoration: 'none' }} to='/'>
                                 <Typography variant="h6" id="my-logo" className="developer-name">
+                                &lt;
                                    Talha Khalid
+                                   /&gt;
                                 </Typography>
                             </Link>
                         </div>

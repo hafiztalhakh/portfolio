@@ -18,15 +18,17 @@ const styles = makeStyles(theme => ({
         color: '#ffff00',
         marginBottom: -10
     },
-    developeName: {
-        color: '#ffff00'
-    },
-    text: {
-        color: '#9F9F9F',
-        textAlign: 'left',
-        fontSize: 16,
-        letterSpacing: 0.48,
-        lineHeight: 1.8
+    paper: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        height: 'auto',
+        width: 'auto',
+        padding: 20,
+        backgroundColor: '#171717',
+        color: '#fff',
+        boxShadow: '10px 20px 30px #0000004D',
+
     },
 }));
 
@@ -44,49 +46,49 @@ const Skills = () => {
                 </p>
                     <Grid container spacing={3}>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <FaHtml5 className="skill-icon" />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <FaCss3Alt />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <IoLogoJavascript />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <FaReact />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <FaNode />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <DiMongodb />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <FaReact />
                                 <h4>HTML</h4>
                             </Paper>
                         </Grid>
                         <Grid item md={3}>
-                            <Paper elevation={3} className="paper">
+                            <Paper elevation={3} className={classes.paper}>
                                 <RiFlutterLine />
                                 <h4>HTML</h4>
                             </Paper>
