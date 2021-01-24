@@ -1,9 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-
-//React Router
 import { withRouter } from 'react-router-dom';
-
-//Material UI
 import { makeStyles } from '@material-ui/core/styles';
 
 //Components
