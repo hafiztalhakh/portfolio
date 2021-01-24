@@ -1,13 +1,36 @@
 import React from 'react';
-//Material UI
-import { Container, Grid, makeStyles, Button } from '@material-ui/core';
-//React Router
+import { Container, Grid, makeStyles, Button, useTheme, useMediaQuery } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
+
+import Image01 from '../Assets/Images/Group 34.png';
 
 const styles = makeStyles(theme => ({
     textContainer: {
+        // position: 'relative',
+        [theme.breakpoints.up('md')]: {
+            marginLeft: 110
+        }
+    },
+    title: {
+        display: 'inline-block',
         position: 'relative',
-        marginLeft: 110
+        color: "#fff",
+        fontSize: 30,
+        fontWeight: 'bold',
+        wordSpacing: 9,
+        transform: 'rotate(-90deg)',
+        top: 230,
+        left: -40,
+        "& :after": {
+            margin: "margin: 20px auto 0px",
+            content: "",
+            display: 'block',
+            height: 7,
+            width: '100%',
+            backgroundColor: '#ffff00',
+            borderRadius: 5,
+            marginTop: 5
+        }
     },
     hi: {
         color: '#ffff00',
@@ -23,34 +46,68 @@ const styles = makeStyles(theme => ({
         letterSpacing: 0.48,
         lineHeight: 1.8
     },
+    btn: {
+        backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #ffff00 0%, rgb(119 115 14 / 71%) 100%)',
+        color: 'white',
+        width: 180,
+        padding: 10,
+        marginTop: 30,
+    },
+    image01Style: {
+        width: '90%',
+        [theme.breakpoints.up('md')]: {
+            marginLeft: 60
+        },
+    },
 }));
 
 const About = () => {
     const classes = styles();
+    const {
+        textContainer,
+        title,
+        hi,
+        developeName,
+        text,
+        btn,
+        image01Style,
+    } = classes;
+    const theme = useTheme();
+    const mediumScreens = useMediaQuery(theme.breakpoints.up('md'));
+    const smallScreens = useMediaQuery(theme.breakpoints.up('sm'));
 
     return (
         <Container maxWidth="lg">
-            <h1 className='title-left'>Introduction</h1>
-            <Grid contaienr spacing={3}>
-                <Grid item md={6}>
+            {
+                mediumScreens && <h1 className="title-left">Introduction</h1>
+            }
+            <Grid contaienr style={{
+                display: "flex",
+                alignItems: "center",
+                height: "100%",
+            }}>
+                <Grid item sm={6} md={6}>
                     <div>
-                        <div className={classes.textContainer}>
-                            <h1 className={classes.hi}>Hi!</h1>
-                            <h4>My name is <span className={classes.developeName}>Talha Khalid</span></h4>
+                        <div className={textContainer}>
+                            <h1 className={hi}>Hi!</h1>
+                            <h4>My name is <span className={developeName}>Talha Khalid</span></h4>
                             <p className="text-info left-text">
                                 I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software engineering and I will graduate in the year 2021. I am Ui Ux designer and currently working as a freelancer.
                             </p>
                             <Button
                                 variant="contain"
-                                className="btn"
+                                className={btn}
                             >CONTACT ME</Button>
                         </div>
                     </div>
 
                 </Grid>
-                <Grid item md={6}>
-
-                </Grid>
+                {
+                    smallScreens &&
+                    <Grid item sm={6} md={6}>
+                        <img src={Image01} alt="image01" className={image01Style} />
+                    </Grid>
+                }
             </Grid>
         </Container>
     )

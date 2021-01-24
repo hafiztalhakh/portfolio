@@ -1,9 +1,5 @@
 import React, { Fragment, useEffect } from 'react';
-
-//React Router
 import { withRouter } from 'react-router-dom';
-
-//Material UI
 import { makeStyles } from '@material-ui/core/styles';
 
 //Components
@@ -12,7 +8,7 @@ import About from '../Components/About';
 import Skills from '../Components/Skills';
 import Education from '../Components/Education';
 
-const styles = makeStyles(theme => ({
+const useStyles = makeStyles(theme => ({
     desktop: {
         display: 'block',
         [theme.breakpoints.down('sm')]: {
@@ -24,23 +20,28 @@ const styles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]: {
             display: 'block'
         },
+    },
+    paddingBlock: {
+        height: 100,
+        [theme.breakpoints.up('md')]: {
+            height: 10
+        }
     }
 }));
 
 function Layout() {
-
-    const classes = styles();
+    const classes = useStyles();
 
     return (
         <Fragment>
             <Navbar />
-           <div style={{height: 80}} />
+            <div className={classes.paddingBlock} />
             <About />
-            <div style={{height: 100}} />
+            <div style={{ height: 100 }} />
             <Skills />
-            <div style={{height: 50}} />
+            <div style={{ height: 50 }} />
             <Education />
-            <div style={{height: 500}} />
+            <div style={{ height: 500 }} />
         </Fragment >
     );
 }

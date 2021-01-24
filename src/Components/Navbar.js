@@ -1,22 +1,20 @@
 import React from 'react';
-//Material UI
 import { Container, Typography, AppBar, Toolbar } from '@material-ui/core';
-//React Router
 import { Link, withRouter } from 'react-router-dom';
 
 const Navbar = () => {
 
     return (
-        <AppBar position="fixed" style={{backgroundColor: '#171717'}}>
+        <AppBar position="fixed" style={{ backgroundColor: '#171717' }}>
             <Container maxWidth="lg">
                 <Toolbar>
                     <div style={{ width: '100%' }}>
                         <div className="logo-box">
                             <Link style={{ textDecoration: 'none' }} to='/'>
                                 <Typography variant="h6" id="my-logo" className="developer-name">
-                                &lt;
-                                   Talha Khalid
-                                   /&gt;
+                                    &lt;
+                                    Talha Khalid
+                                    /&gt;
                                 </Typography>
                             </Link>
                         </div>
