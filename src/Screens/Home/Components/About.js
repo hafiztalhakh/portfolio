@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, makeStyles, Button, useTheme, useMediaQuery } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
-import Image01 from '../Assets/Images/Group 34.png';
+import Image01 from '../../../Assets/Images/Group 34.png';
 
 const styles = makeStyles(theme => ({
     textContainer: {

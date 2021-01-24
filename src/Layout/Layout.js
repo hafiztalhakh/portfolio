@@ -4,15 +4,20 @@ import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 
 //Components
 import Navbar from '../Components/Navbar';
-import About from '../Components/About';
-import Skills from '../Components/Skills';
-import Education from '../Components/Education';
+import Home from '../Screens/Home/Home';
+import Footer from '../Components/Footer';
 
 const useStyles = makeStyles(theme => ({
-    paddingBlock: {
-        height: 100,
+    paddingBlockTop: {
+        height: 50,
         [theme.breakpoints.up('md')]: {
-            height: 10
+            height: 0
+        }
+    },
+    paddingBlock: {
+        height: 50,
+        [theme.breakpoints.up('md')]: {
+            height: 50
         }
     }
 }));
@@ -25,13 +30,10 @@ function Layout() {
     return (
         <Fragment>
             <Navbar />
-            <div className={classes.paddingBlock} />
-            <About />
-            <div className={classes.paddingBlock} />
-            <Skills />
-            <div className={classes.paddingBlock} />
-            <Education />
-            <div className={classes.paddingBlock} />
+            <div className={classes.paddingBlockTop} />
+            <Home />
+            <div className={classes.paddingBlockTop} />
+            <Footer />
         </Fragment >
     );
 }
