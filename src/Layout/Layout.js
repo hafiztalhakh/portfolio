@@ -7,10 +7,10 @@ import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 //Components
-import Navbar from '../../Components/Navbar';
-import About from '../../Components/About';
-import Skills from '../../Components/Skills';
-import Education from '../../Components/Education';
+import Navbar from '../Components/Navbar';
+import About from '../Components/About';
+import Skills from '../Components/Skills';
+import Education from '../Components/Education';
 
 const styles = makeStyles(theme => ({
     desktop: {
