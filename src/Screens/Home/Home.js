@@ -8,6 +8,7 @@ import Skills from './Components/Skills';
 import Education from './Components/Education';
 import Experience from './Components/Experience';
 import Proficiency from './Components/Proficiency';
+import Projects from './Components/Projects';
 
 const useStyles = makeStyles(theme => ({
     paddingBlockTop: {
@@ -41,6 +42,7 @@ function Home() {
             <div className={classes.paddingBlock} />
             <Proficiency />
             <div className={classes.paddingBlock} />
+            <Projects />
         </Fragment >
     );
 }

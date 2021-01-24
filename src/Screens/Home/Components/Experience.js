@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 
-import Freelancing from '../Assets/Images/freelancing.svg';
-import Novasoft from '../Assets/Images/logo.png';
+import Freelancing from '../../../Assets/Images/freelancing.svg';
+import Novasoft from '../../../Assets/Images/logo.png';
 
 const styles = makeStyles(theme => ({
     sectionTitleContainer: {

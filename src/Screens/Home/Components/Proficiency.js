@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { withStyles } from "@material-ui/core/styles";
 import { Container, Grid, Paper, Typography } from '@material-ui/core';
-import CustomizedProgress from '../Components/CustomisedProgress';
+
+import CustomizedProgress from '../../../Components/CustomisedProgress';
 
 const styles = theme => ({
     sectionTitleContainer: {

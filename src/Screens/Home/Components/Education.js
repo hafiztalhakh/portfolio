@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Container, Grid, makeStyles, Paper } from '@material-ui/core';
 
-import KULogo from '../Assets/Images/Group 29.png';
-import JouharDegree from '../Assets/Images/jouhar.jpg';
-import TheEducators from '../Assets/Images/the-educators-1.jpg';
+import KULogo from '../../../Assets/Images/Group 29.png';
+import JouharDegree from '../../../Assets/Images/jouhar.jpg';
+import TheEducators from '../../../Assets/Images/the-educators-1.jpg';
 
 const styles = makeStyles(theme => ({
     sectionTitleContainer: {

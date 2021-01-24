@@ -32,7 +32,7 @@ function Layout() {
             <Navbar />
             <div className={classes.paddingBlockTop} />
             <Home />
-            <div className={classes.paddingBlockTop} />
+            <div className={classes.paddingBlock} />
             <Footer />
         </Fragment >
     );

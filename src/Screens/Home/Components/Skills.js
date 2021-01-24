@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Container, Grid, makeStyles, Typography, Paper } from '@material-ui/core';
 
-import HTML from '../Assets/Images/Mask Group 22.png';
-import ReactIcon from '../Assets/Images/react.svg';
-import NodeIcon from '../Assets/Images/nodejs.svg';
-import ExpressIcon from '../Assets/Images/expressjs.png';
-import MongoDbIcon from '../Assets/Images/mongodb.svg';
-import SqlDatabase from '../Assets/Images/sql-database.svg';
-import CSSIcon from '../Assets/Images/css-3.svg';
-import GithubIcon from '../Assets/Images/github.svg';
-import JavascriptIcon from '../Assets/Images/javascript.svg';
+import HTML from '../../../Assets/Images/Mask Group 22.png';
+import ReactIcon from '../../../Assets/Images/react.svg';
+import NodeIcon from '../../../Assets/Images/nodejs.svg';
+import ExpressIcon from '../../../Assets/Images/expressjs.png';
+import MongoDbIcon from '../../../Assets/Images/mongodb.svg';
+import SqlDatabase from '../../../Assets/Images/sql-database.svg';
+import CSSIcon from '../../../Assets/Images/css-3.svg';
+import GithubIcon from '../../../Assets/Images/github.svg';
+import JavascriptIcon from '../../../Assets/Images/javascript.svg';
 
 const styles = makeStyles(theme => ({
     sectionTitleContainer: {

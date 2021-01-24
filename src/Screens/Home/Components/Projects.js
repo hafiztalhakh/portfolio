@@ -4,7 +4,7 @@ import { Container, Grid, Paper, Typography } from '@material-ui/core';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import Project1 from '../Assets/Project Images/Project1.png';
+import Project1 from '../../../Assets/Project Images/Project1.png';
 
 const styles = theme => ({
     mainHeading: {
@@ -69,14 +69,12 @@ class Projects extends Component {
                         items={
                             projects.map((project, index) => {
                                 return (
-                                    <a href={project.link} target="_blank">
-                                        <Paper style={{ marginRight: 30, borderRadius: 15, }} onClick={() => window.open(project.link, '_blank')}>
-                                            <img src={project.img} alt={index} className={image} draggable={false} />
-                                            <Typography className={description}>
-                                                {project.description}
-                                            </Typography>
-                                        </Paper>
-                                    </a>
+                                    <div>
+                                        <img src={project.img} alt={index} className={image} draggable={false} />
+                                        <Typography className={description}>
+                                            {project.description}
+                                        </Typography>
+                                    </div>
                                 )
                             })
                         }
