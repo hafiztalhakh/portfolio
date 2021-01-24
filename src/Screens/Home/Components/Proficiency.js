@@ -17,7 +17,7 @@ const styles = theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#ffff00',
+        backgroundColor: '#087059',
         height: 5,
         borderRadius: 40
     },
@@ -31,7 +31,7 @@ const styles = theme => ({
         alignItems: "center",
     },
     underlineStyle: {
-        background: "#ffff00",
+        background: "#087059",
         height: "4px",
         borderRadius: 30,
     },

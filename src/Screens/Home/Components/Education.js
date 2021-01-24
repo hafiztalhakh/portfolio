@@ -18,7 +18,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#ffff00',
+        backgroundColor: '#087059',
         height: 5,
         borderRadius: 40
     },
@@ -44,10 +44,11 @@ const styles = makeStyles(theme => ({
         }
     },
     instituteStyle: {
-        color: '#ffff00',
+        color: '#087059',
         fontSize: 22,
         marginTop: 0,
         marginBottom: 10,
+        fontWeight: 'normal'
     },
     infoDegree: {
         color: '#fff',

@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { withStyles } from "@material-ui/core/styles";
 import { Container, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, Paper, Typography } from '@material-ui/core';
 
+import { Link } from 'react-router-dom';
+
 import FB from '../Assets/Images/Group 36.png';
 import Linkedin from '../Assets/Images/linkedin.png';
 import PhoneIcon from '../Assets/Images/Icon material-call.png';
@@ -11,14 +13,16 @@ const styles = theme => ({
     mainDiv: {
         width: "100%",
         height: 330,
+
     },
     mainName: {
         fontSize: 32,
-        color: "#ffff00",
+        color: "#fff",
+        textDecoration: 'none'
     },
     secondaryText: {
         fontSize: 16,
-        color: "#ffff00",
+        color: "#fff",
         fontStyle: "italic",
     },
     normalText: {
@@ -83,9 +87,13 @@ class Footer extends Component {
                             <Grid item md={4} xs={12}>
                                 <Grid container>
                                     <Grid item xs={12}>
-                                        <Typography className={mainName}>
-                                            TALHA <text style={{ color: "white" }}>KHALID</text>
-                                        </Typography>
+                                        <Link className={mainName} to='/'>
+                                            <Typography variant="h6" id="my-logo" className="developer-name">
+                                                &lt;
+                                                Talha Khalid
+                                                /&gt;
+                                            </Typography>
+                                        </Link>
                                         <Typography className={secondaryText}>
                                             Software Engineer
                                             <br />
@@ -171,9 +179,9 @@ class Footer extends Component {
                             </Grid>
                         </Grid>
                     </Container>
-                    <Divider style={{ background: "#ffff00" }} />
+                    <Divider style={{ background: "#087059" }} />
                     <div className={creditDiv}>
-                        <Typography className={normalText} style={{ padding: 20, color: "#ffff00" }}>
+                        <Typography className={normalText} style={{ padding: 20, color: "#087059" }}>
                             All Rights Reserved By Talha Khalid
                         </Typography>
                     </div>

@@ -24,7 +24,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#ffff00',
+        backgroundColor: '#087059',
         height: 5,
         borderRadius: 40
     },

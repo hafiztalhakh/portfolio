@@ -27,17 +27,17 @@ const styles = makeStyles(theme => ({
             display: 'block',
             height: 7,
             width: '100%',
-            backgroundColor: '#ffff00',
+            backgroundColor: '#087059',
             borderRadius: 5,
             marginTop: 5
         }
     },
     hi: {
-        color: '#ffff00',
+        color: '#087059',
         marginBottom: -10
     },
     developeName: {
-        color: '#ffff00'
+        color: '#087059'
     },
     text: {
         color: '#9F9F9F',
@@ -47,7 +47,7 @@ const styles = makeStyles(theme => ({
         lineHeight: 1.8
     },
     btn: {
-        backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #ffff00 0%, rgb(119 115 14 / 71%) 100%)',
+        backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #087059 0%, rgb(119 115 14 / 71%) 100%)',
         color: 'white',
         width: 180,
         padding: 10,
@@ -90,7 +90,7 @@ const About = () => {
                     <div>
                         <div className={textContainer}>
                             <h1 className={hi}>Hi!</h1>
-                            <h4>My name is <span className={developeName}>Talha Khalid</span></h4>
+                            <h4 style={{ fontWeight: 'normal' }}>My name is <strong className={developeName}>Talha Khalid</strong></h4>
                             <p className="text-info left-text">
                                 I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software engineering and I will graduate in the year 2021. I am Ui Ux designer and currently working as a freelancer.
                             </p>

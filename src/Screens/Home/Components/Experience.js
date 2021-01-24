@@ -17,7 +17,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#ffff00',
+        backgroundColor: '#087059',
         height: 5,
         borderRadius: 40
     },
@@ -53,7 +53,7 @@ const styles = makeStyles(theme => ({
         fontWeight: 'normal'
     },
     occupationTitle: {
-        color: '#ffff00',
+        color: '#087059',
         fontSize: 20,
         margin: "20px 0",
     },
