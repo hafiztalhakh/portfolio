@@ -14,11 +14,11 @@ const styles = theme => ({
     },
     mainName: {
         fontSize: 32,
-        color: "#00BBF9",
+        color: "#ffff00",
     },
     secondaryText: {
         fontSize: 16,
-        color: "#00BBF9",
+        color: "#ffff00",
         fontStyle: "italic",
     },
     normalText: {
@@ -84,7 +84,7 @@ class Footer extends Component {
                                 <Grid container>
                                     <Grid item xs={12}>
                                         <Typography className={mainName}>
-                                            HAMZA <text style={{ color: "white" }}>KHAN</text>
+                                            TALHA <text style={{ color: "white" }}>KHALID</text>
                                         </Typography>
                                         <Typography className={secondaryText}>
                                             Software Engineer
@@ -99,21 +99,6 @@ class Footer extends Component {
                                     </Grid>
                                     <Grid item xs>
                                         <img src={FB} alt="fb" className={socialIcon} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
                                     </Grid>
                                 </Grid>
                             </Grid>
@@ -163,7 +148,15 @@ class Footer extends Component {
                                             <img src={PhoneIcon} alt="phone" />
                                         </ListItemAvatar>
                                         <ListItemText>
-                                            03002322689
+                                            03362502067
+                                        </ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemAvatar>
+                                            <img src={PhoneIcon} alt="phone" />
+                                        </ListItemAvatar>
+                                        <ListItemText>
+                                            03040438807
                                         </ListItemText>
                                     </ListItem>
                                     <ListItem>
@@ -171,17 +164,17 @@ class Footer extends Component {
                                             <img src={Mail} alt="mail" />
                                         </ListItemAvatar>
                                         <ListItemText>
-                                            m.hamzakhan91able@gmail.com
+                                            hafiz.talhakh@gmail.com
                                         </ListItemText>
                                     </ListItem>
                                 </List>
                             </Grid>
                         </Grid>
                     </Container>
-                    <Divider style={{ background: "#00BBF9" }} />
+                    <Divider style={{ background: "#ffff00" }} />
                     <div className={creditDiv}>
-                        <Typography className={normalText} style={{ padding: 20, color: "#00BBF9" }}>
-                            All Rights Reserved By Hamza Khan
+                        <Typography className={normalText} style={{ padding: 20, color: "#ffff00" }}>
+                            All Rights Reserved By Talha Khalid
                         </Typography>
                     </div>
                 </div>

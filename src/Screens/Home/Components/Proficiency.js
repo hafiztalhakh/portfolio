@@ -96,7 +96,7 @@ class Proficiency extends Component {
             <Container maxWidth="md" style={{ marginTop: 60 }}>
                 <div className={sectionTitleContainer}>
                     <h1 className={sectionTitle}>
-                        Experience
+                        PROFICIENCY
                 <div className={underline} />
                     </h1>
                 </div>
