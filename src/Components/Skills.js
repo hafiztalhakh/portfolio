@@ -1,22 +1,32 @@
-import React from 'react';
-//Material UI
-import { Container, Grid, makeStyles, Button, Paper } from '@material-ui/core';
-//React Router
-import { withRouter } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Container, Grid, makeStyles, Typography, Paper } from '@material-ui/core';
 
-import { FaWordpress, FaReact, FaNode, FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { RiFlutterLine } from "react-icons/ri";
-import { IoLogoJavascript } from 'react-icons/io';
-import { DiMongodb, DiFirebase } from 'react-icons/di'
+import HTML from '../Assets/Images/Mask Group 22.png';
+import ReactIcon from '../Assets/Images/react.svg';
+import NodeIcon from '../Assets/Images/nodejs.svg';
+import ExpressIcon from '../Assets/Images/expressjs.png';
+import MongoDbIcon from '../Assets/Images/mongodb.svg';
+import SqlDatabase from '../Assets/Images/sql-database.svg';
+import CSSIcon from '../Assets/Images/css-3.svg';
+import GithubIcon from '../Assets/Images/github.svg';
+import JavascriptIcon from '../Assets/Images/javascript.svg';
 
 const styles = makeStyles(theme => ({
-    textContainer: {
-        position: 'relative',
-        marginLeft: 150
+    sectionTitleContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 30
     },
-    hi: {
-        color: '#ffff00',
-        marginBottom: -10
+    sectionTitle: {
+        color: '#fff',
+        fontSize: 36,
+        textAlign: 'center'
+    },
+    underline: {
+        backgroundColor: '#ffff00',
+        height: 5,
+        borderRadius: 40
     },
     paper: {
         display: 'flex',
@@ -30,74 +40,123 @@ const styles = makeStyles(theme => ({
         boxShadow: '10px 20px 30px #0000004D',
 
     },
+    skillLogo: {
+        height: 80,
+        width: 80,
+    },
+    skillName: {
+        color: "white",
+        fontSize: 18,
+        fontWeight: 'normal'
+    },
+    mongooseContainer: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 80
+    },
+    mongooseStyle: {
+        color: "#800",
+        fontWeight: 100,
+        fontSize: 35,
+        [theme.breakpoints.down('md')]: {
+            fontSize: 27,
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 20,
+        }
+    }
 }));
 
-const Skills = () => {
+export default function Skills() {
     const classes = styles();
+    const {
+        sectionTitleContainer,
+        sectionTitle,
+        underline,
+        skillLogo,
+        mongooseContainer,
+        mongooseStyle,
+        skillName
+    } = classes;
+    const [data, setData] = useState([
+        {
+            skill: "MongoDB",
+            icon: MongoDbIcon,
+        },
+        {
+            skill: "Express",
+            icon: ExpressIcon,
+        },
+        {
+            skill: "ReactJS",
+            icon: ReactIcon,
+        },
+        {
+            skill: "NodeJS",
+            icon: NodeIcon,
+        },
+        {
+            skill: "React Native",
+            icon: ReactIcon,
+        },
+        {
+            skill: "Mongoose",
+            icon: null,
+        },
+        {
+            skill: "SQL Database",
+            icon: SqlDatabase,
+        },
+        {
+            skill: "Javascript",
+            icon: JavascriptIcon,
+        },
+        {
+            skill: "HTML",
+            icon: HTML,
+        },
+        {
+            skill: "CSS3",
+            icon: CSSIcon,
+        },
+        {
+            skill: "Github",
+            icon: GithubIcon,
+        },
+    ])
 
     return (
-        <Container maxWidth="lg">
-            <h1 className='title-left' style={{ marginLeft: 50, top: 325 }}>Skills</h1>
-            <div className={classes.textContainer}>
-                <Container maxWidth="md">
-                    <h1 className="title center-text">What I do</h1>
-                    <p className="text-info center-text">
-                        I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software engineering and I will graduate in the year 2021. I am Ui Ux designer and currently working as a freelancer.
-                </p>
-                    <Grid container spacing={3}>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <FaHtml5 className="skill-icon" />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <FaCss3Alt />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <IoLogoJavascript />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <FaReact />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <FaNode />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <DiMongodb />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <FaReact />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                        <Grid item md={3}>
-                            <Paper elevation={3} className={classes.paper}>
-                                <RiFlutterLine />
-                                <h4>HTML</h4>
-                            </Paper>
-                        </Grid>
-                    </Grid>
-                </Container>
+        <Container maxWidth="md">
+            <div className={sectionTitleContainer}>
+                <h1 className={sectionTitle}>
+                    What I do
+                <div className={underline} />
+                </h1>
             </div>
+            <Grid container spacing={3}>
+                {
+                    data && data.length &&
+                    data.map((el, i) => (
+                        <Grid item xs={6} sm={4} md={3}>
+                            <Paper elevation={3} className={classes.paper} key={i}>
+                                {
+                                    el.skill !== "Mongoose"
+                                        ?
+                                        <img src={el.icon} alt={el.skill} className={skillLogo} />
+                                        :
+                                        <div className={mongooseContainer}>
+                                            <Typography className={mongooseStyle}>
+                                                Mongoose
+                                            </Typography>
+                                        </div>
+                                }
+                                <h4 className={skillName}>{el.skill}</h4>
+                            </Paper>
+                        </Grid>
+                    ))
+                }
+            </Grid>
         </Container>
     )
 }
-
-export default withRouter(Skills);

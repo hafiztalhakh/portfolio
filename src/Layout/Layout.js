@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 
 //Components
 import Navbar from '../Components/Navbar';
@@ -9,18 +9,6 @@ import Skills from '../Components/Skills';
 import Education from '../Components/Education';
 
 const useStyles = makeStyles(theme => ({
-    desktop: {
-        display: 'block',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        },
-    },
-    mobile: {
-        display: 'none',
-        [theme.breakpoints.down('sm')]: {
-            display: 'block'
-        },
-    },
     paddingBlock: {
         height: 100,
         [theme.breakpoints.up('md')]: {
@@ -31,17 +19,19 @@ const useStyles = makeStyles(theme => ({
 
 function Layout() {
     const classes = useStyles();
+    const theme = useTheme();
+    const mediumScreens = useMediaQuery(theme.breakpoints.up('md'));
 
     return (
         <Fragment>
             <Navbar />
             <div className={classes.paddingBlock} />
             <About />
-            <div style={{ height: 100 }} />
+            <div className={classes.paddingBlock} />
             <Skills />
-            <div style={{ height: 50 }} />
+            <div className={classes.paddingBlock} />
             <Education />
-            <div style={{ height: 500 }} />
+            <div className={classes.paddingBlock} />
         </Fragment >
     );
 }
