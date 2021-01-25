@@ -3,7 +3,7 @@ import { Container, Divider, Typography, makeStyles } from '@material-ui/core';
 import axios from "axios";
 
 import Profile from "./Components/Profile";
-import Contact from "./Components/Contact";
+import FooterNormal from "./Components/NormalFooter";
 
 import { openSource } from "../../Portfolio/portfolio";
 
@@ -55,6 +55,6 @@ export default function Footer() {
             </Fragment>
         );
     } else {
-        return (<Contact />);
+        return (<FooterNormal />);
     }
 }
