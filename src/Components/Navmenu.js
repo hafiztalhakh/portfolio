@@ -2,22 +2,15 @@ import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { Container, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Typography, Button, Dialog, Divider, AppBar, Toolbar, IconButton, Slide } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
-import WorkIcon from '@material-ui/icons/Work';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import { FaRegUserCircle } from 'react-icons/fa';
-import { MdReceipt } from 'react-icons/md';
-import { GiHelp } from 'react-icons/gi';
-import { FiSettings } from 'react-icons/fi';
+
+import { about } from "../Portfolio/portfolio";
+
 
 const styles = theme => ({
     root: {
-        "& .MuiDialog-paperFullScreen":{
+        "& .MuiDialog-paperFullScreen": {
             backgroundColor: '#171717'
         }
     },
@@ -79,7 +72,7 @@ class Drawer extends Component {
                                 <Link style={{ textDecoration: 'none' }} to='/'>
                                     <Typography variant="h6" id="my-logo" className="developer-name">
                                         &lt;
-                                        Talha Khalid
+                                        {about.developerName}
                                         /&gt;
                                 </Typography>
                                 </Link>
@@ -93,19 +86,19 @@ class Drawer extends Component {
                         <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
                             <ListItemText primary="About" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#skills') }}>
                             <ListItemText primary="Skills" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#education') }}>
                             <ListItemText primary="Education" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#experience') }}>
                             <ListItemText primary="Experience" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#projects') }}>
                             <ListItemText primary="Projects" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#contact') }}>
                             <ListItemText primary="Contact" />
                         </ListItem>
                     </List>
@@ -126,7 +119,7 @@ class Drawer extends Component {
                         <Link style={{ textDecoration: 'none' }} to='/'>
                             <Typography variant="h6" id="my-logo" className="developer-name">
                                 &lt;
-                                Talha Khalid
+                                {about.developerName}
                                 /&gt;
                                 </Typography>
                         </Link>

@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Typography, AppBar, Toolbar } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 
+import { about } from "../Portfolio/portfolio";
+
 const Navbar = () => {
 
     return (
@@ -13,7 +15,7 @@ const Navbar = () => {
                             <Link style={{ textDecoration: 'none' }} to='/'>
                                 <Typography variant="h6" id="my-logo" className="developer-name">
                                     &lt;
-                                    Talha Khalid
+                                   {about.developerName}
                                     /&gt;
                                 </Typography>
                             </Link>

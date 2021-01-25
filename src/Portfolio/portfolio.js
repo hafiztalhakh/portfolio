@@ -1,17 +1,14 @@
 /* Change this file to get your personal Portfolio */
 
-// Your Summary And Greeting Section
+// Your Info
 const about = {
-    /* Your Summary And Greeting Section */
-    username: "Talha Khalid",
-    // title: "Hi all, I'm Talha Khalid",
+    developerName: "Talha Khalid",
     aboutText: "A passionate Software Developer having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.",
     resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
 };
 
 // Your Social Media Link
 const socialMediaLinks = {
-
     github: "https://github.com/Talha619",
     linkedin: "https://www.linkedin.com/in/hafiz-talha/",
     gmail: "hafiz.talhakh@gmail.com",
@@ -27,7 +24,12 @@ const openSource = {
     showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to false 
 };
 
-const contactInfo = { }
+const contactInfo = {
+    subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
+    number: "+923362502067",
+    number2: "+923040438807",
+    email: "hafiz.talhakh@gmail.com"
+};
 
 export {
     about,
