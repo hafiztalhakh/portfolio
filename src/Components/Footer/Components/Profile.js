@@ -1,10 +1,9 @@
 import React from "react";
-import {makeStyles } from '@material-ui/core';
-
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import { contactInfo } from "../../portfolio";
-
+import { makeStyles, Grid, Typography } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { Fade } from "react-reveal";
+
+import { contactInfo } from "../../../Portfolio/portfolio";
 
 const styles = makeStyles(theme => ({
     textContainer: {
@@ -13,15 +12,39 @@ const styles = makeStyles(theme => ({
             marginLeft: 110
         }
     },
-    
+    mainName: {
+        fontSize: 32,
+        color: "#fff",
+        textDecoration: 'none'
+    },
+    imageContentProfile: {
+        textAlign: 'right',
+        flex: '20%',
+        maxWidth: '100%',
+        height: 'auto',
+    },
+    profileImage: {
+        borderRadius: '50%',
+        border: '0.5rem solid #6c63ff',
+        marginLeft: 'auto',
+        width: '100%',
+        maxWidth: 350,
+        height: 'auto',
+        "&:hover": {
+            boxShadow: 'rgba(0, 0, 0, 1) 0 30px 30px - 30px',
+            transition: 'all 0.3s ease - out'
+        }
+    }
 }));
 
 export default function GithubProfileCard({ prof }) {
     const classes = styles();
     const {
-        
+        mainName,
+        imageContentProfile,
+        profileImage
     } = classes;
-    
+
     if (prof.hireable !== null) {
         prof.hireable = "Yes";
     } else {
@@ -30,13 +53,21 @@ export default function GithubProfileCard({ prof }) {
     return (
         <Fade bottom duration={1000} distance="20px">
             <div className="main" id="contact">
-                <h1 className="prof-title">Reach Out to me!</h1>
-                <div className="row">
-                    <div className="main-content-profile">
+                <Grid container>
+                    <Grid item xs={12} sm={8} md={9}>
+                        <div>
+                            <Link className={mainName} to='/'>
+                                <Typography variant="h6" id="my-logo" className="developer-name">
+                                    &lt;
+                                    Talha Khalid
+                                    /&gt;
+                                </Typography>
+                            </Link>
+                        </div>
                         <div className="blog-header">
                             <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
                         </div>
-                        <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
+                        <h2 className="bio-text">"{String(prof.bio)}"</h2>
                         {prof.location !== null &&
                             <div className="location-div">
                                 <span className="desc-prof">
@@ -46,12 +77,13 @@ export default function GithubProfileCard({ prof }) {
                         <div className="opp-div">
                             <span className="desc-prof">Open for opportunities: {prof.hireable}</span>
                         </div>
-                        <SocialMedia />
-                    </div>
-                    <div className="image-content-profile">
-                        <img src={prof.avatar_url} alt={prof.name} className="profile-image" />
-                    </div>
-                </div>
+                    </Grid>
+                    <Grid item xs={12} sm={4} md={3}>
+                        <div className={imageContentProfile}>
+                            <img src={prof.avatar_url} alt={prof.name} className={profileImage} />
+                        </div>
+                    </Grid>
+                </Grid>
             </div>
         </Fade>
     );

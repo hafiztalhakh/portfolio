@@ -1,13 +1,31 @@
-import React, { useState, useEffect } from "react";
-import { Container, Grid, makeStyles, Button, useTheme, useMediaQuery } from '@material-ui/core';
+import React, { useState, useEffect, Fragment } from "react";
+import { Container, Divider, Typography, makeStyles } from '@material-ui/core';
 import axios from "axios";
 
 import Profile from "./Components/Profile";
 import Contact from "./Components/Contact";
 
-import { openSource } from "../../portfolio";
+import { openSource } from "../../Portfolio/portfolio";
 
-export default function Profile() {
+const styles = makeStyles(theme => ({
+    normalText: {
+        fontSize: 16,
+    },
+    creditDiv: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
+}));
+
+export default function Footer() {
+    const classes = styles();
+    const {
+        normalText,
+        creditDiv,
+    } = classes;
+
     const [prof, setrepo] = useState([]);
 
     function setProfileFunction(array) {
@@ -23,7 +41,19 @@ export default function Profile() {
         getProfileData();
     }, []);
     if (openSource.showGithubProfile === "true") {
-        return (<Profile prof={prof} key={prof.id} />);
+        return (
+            <Fragment>
+                <Container maxWidth="lg">
+                    <Profile prof={prof} />
+                </Container>
+                <Divider style={{ background: "#087059" }} />
+                <div className={creditDiv}>
+                    <Typography className={normalText} style={{ padding: 20, color: "#087059" }}>
+                        All Rights Reserved By Talha Khalid
+                    </Typography>
+                </div>
+            </Fragment>
+        );
     } else {
         return (<Contact />);
     }

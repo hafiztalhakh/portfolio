@@ -1,7 +1,6 @@
 import React from "react";
-import "./Contact.css";
-import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {contactInfo} from "../../portfolio";
+// import SocialMedia from "../../components/socialMedia/SocialMedia";
+import {contactInfo} from "../../../Portfolio/portfolio";
 import { Fade } from "react-reveal";
 
 export default function Contact() {
@@ -19,11 +18,11 @@ export default function Contact() {
                         <a className="contact-detail-email"
                            href={"mailto:" + contactInfo.email_address}>{contactInfo.email_address}</a>
                         <br/><br/>
-                        <SocialMedia/>
+                        {/* <SocialMedia/> */}
                     </div>
                 </div>
                 <div className="contact-image-div">
-                    <img alt="Saad Working" src={require("../../assets/images/contactMail.png")}></img>
+                    {/* <img alt="Saad Working" src={require("../../assets/images/contactMail.png")}></img> */}
                 </div>
             </div>
         </div>

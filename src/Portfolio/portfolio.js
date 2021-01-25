@@ -27,8 +27,11 @@ const openSource = {
     showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to false 
 };
 
+const contactInfo = { }
+
 export {
     about,
     socialMediaLinks,
-    openSource
+    openSource,
+    contactInfo
 };
