@@ -1,7 +1,10 @@
 import React from "react";
-import { makeStyles, Grid, Typography } from '@material-ui/core';
+import { makeStyles, Grid, Typography, ListItem, ListItemIcon, ListItemText, useTheme, useMediaQuery } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { Fade } from "react-reveal";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmailIcon from '@material-ui/icons/Email';
 
 import { contactInfo } from "../../../Portfolio/portfolio";
 
@@ -18,10 +21,13 @@ const styles = makeStyles(theme => ({
         textDecoration: 'none'
     },
     imageContentProfile: {
-        textAlign: 'right',
+        textAlign: 'center',
         flex: '20%',
         maxWidth: '100%',
         height: 'auto',
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: '95%',
+        }
     },
     profileImage: {
         borderRadius: '50%',
@@ -34,15 +40,38 @@ const styles = makeStyles(theme => ({
             boxShadow: 'rgba(0, 0, 0, 1) 0 30px 30px - 30px',
             transition: 'all 0.3s ease - out'
         }
+    },
+    oppurtunityBool: {
+        color: '#087059'
+    },
+    contactMe: {
+        marginLeft: 5
+    },
+    listItemIcon: {
+        minWidth: 30
+    },
+    icons: {
+        color: '#087059'
+    },
+    contactLinks: {
+        textDecoration: 'none',
+        color: 'inherit'
     }
 }));
 
 export default function GithubProfileCard({ prof }) {
+    const theme = useTheme();
+    const dektopScreen = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = styles();
     const {
         mainName,
         imageContentProfile,
-        profileImage
+        profileImage,
+        oppurtunityBool,
+        contactMe,
+        listItemIcon,
+        icons,
+        contactLinks
     } = classes;
 
     if (prof.hireable !== null) {
@@ -54,35 +83,89 @@ export default function GithubProfileCard({ prof }) {
         <Fade bottom duration={1000} distance="20px">
             <div className="main" id="contact">
                 <Grid container>
-                    <Grid item xs={12} sm={8} md={9}>
-                        <div>
-                            <Link className={mainName} to='/'>
-                                <Typography variant="h6" id="my-logo" className="developer-name">
-                                    &lt;
-                                    Talha Khalid
-                                    /&gt;
+                    {
+                        !dektopScreen &&
+                        <Grid item xs={12} sm={4} md={3}>
+                            <div className={imageContentProfile}>
+                                <img src={prof.avatar_url} alt={prof.name} className={profileImage} />
+                            </div>
+                        </Grid>
+                    }
+                    <Grid item xs={12} sm={7} md={7}>
+                        {
+                            dektopScreen &&
+                            <div>
+                                <Link className={mainName} to='/'>
+                                    <Typography variant="h6" id="my-logo" className="developer-name">
+                                        &lt;
+                                        Talha Khalid
+                                        /&gt;
                                 </Typography>
-                            </Link>
-                        </div>
+                                </Link>
+                            </div>
+                        }
                         <div className="blog-header">
                             <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
                         </div>
-                        <h2 className="bio-text">"{String(prof.bio)}"</h2>
-                        {prof.location !== null &&
-                            <div className="location-div">
-                                <span className="desc-prof">
-                                    <svg viewBox="0 0 12 16" version="1.1" width="20" height="18" aria-hidden="true"><path fill-rule="evenodd" d="M6 0C2.69 0 0 2.5 0 5.5 0 10.02 6 16 6 16s6-5.98 6-10.5C12 2.5 9.31 0 6 0zm0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61.48 3.56 1.36.92.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05zM8 5.5c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>{prof.location}
-                                </span>
-                            </div>}
+                        <h3 className="bio-text">"{String(prof.bio)}"</h3>
                         <div className="opp-div">
-                            <span className="desc-prof">Open for opportunities: {prof.hireable}</span>
+                            <span className={oppurtunityBool}>Open for opportunities: <strong>{prof.hireable}</strong></span>
                         </div>
+                        <div style={{ height: 15 }} />
+                        <Grid container>
+                            <Grid item xs={12} sm={6}>
+                                <p className={contactMe}>Contact Me</p>
+                                <ListItem disableGutters>
+                                    <ListItemIcon className={listItemIcon}>
+                                        <PhoneIcon className={icons} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={
+                                        <a href="tel:03362502067" className={contactLinks}>03362502067</a>
+                                    } />
+                                </ListItem>
+                                <ListItem disableGutters>
+                                    <ListItemIcon className={listItemIcon}>
+                                        <PhoneIcon className={icons} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={
+                                        <a href="tel:03040438807" className={contactLinks}>03040438807</a>
+                                    } />
+                                </ListItem>
+                                <ListItem disableGutters>
+                                    <ListItemIcon className={listItemIcon}>
+                                        <EmailIcon className={icons} />
+                                    </ListItemIcon>
+                                    <ListItemText primary={
+                                        <a href="mailto:hafiz.talhakh@gmail.com" className={contactLinks}>hafiz.talhakh@gmail.com</a>
+                                    } />
+                                </ListItem>
+                                {prof.location !== null &&
+                                    <ListItem disableGutters>
+                                        <ListItemIcon className={listItemIcon}>
+                                            <LocationOnIcon className={icons} />
+                                        </ListItemIcon>
+                                        <ListItemText primary={prof.location} />
+                                    </ListItem>
+                                }
+                            </Grid>
+                            <Grid item xs={12} sm={6}>
+                                <p className={contactMe}>Follow Me</p>
+                            </Grid>
+                        </Grid>
+
                     </Grid>
-                    <Grid item xs={12} sm={4} md={3}>
-                        <div className={imageContentProfile}>
-                            <img src={prof.avatar_url} alt={prof.name} className={profileImage} />
-                        </div>
-                    </Grid>
+                    {
+                        dektopScreen && <Grid item xs={12} sm={1} md={2}> </Grid>
+                    }
+
+                    {
+                        dektopScreen &&
+                        <Grid item xs={12} sm={4} md={3}>
+                            <div className={imageContentProfile}>
+                                <img src={prof.avatar_url} alt={prof.name} className={profileImage} />
+                            </div>
+                        </Grid>
+                    }
                 </Grid>
             </div>
         </Fade>
