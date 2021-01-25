@@ -4,12 +4,13 @@ import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 
 //Components
 import Navbar from '../Components/Navbar';
+import NavMenu from '../Components/Navmenu';
 import Home from '../Screens/Home/Home';
 import Footer from '../Components/Footer';
 
 const useStyles = makeStyles(theme => ({
     paddingBlockTop: {
-        height: 50,
+        height: 100,
         [theme.breakpoints.up('md')]: {
             height: 0
         }
@@ -29,7 +30,13 @@ function Layout() {
 
     return (
         <Fragment>
-            <Navbar />
+            {
+                mediumScreens ?
+                    <Navbar />
+                    :
+                    <NavMenu />
+            }
+
             <div className={classes.paddingBlockTop} />
             <Home />
             <div className={classes.paddingBlock} />

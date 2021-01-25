@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { Container, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Typography, Button, Dialog, Divider, AppBar, Toolbar, IconButton, Slide } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
@@ -16,6 +16,11 @@ import { GiHelp } from 'react-icons/gi';
 import { FiSettings } from 'react-icons/fi';
 
 const styles = theme => ({
+    root: {
+        "& .MuiDialog-paperFullScreen":{
+            backgroundColor: '#171717'
+        }
+    },
     appBar: {
         position: 'relative',
     },
@@ -24,16 +29,12 @@ const styles = theme => ({
         flex: 1,
     },
     listItem: {
-        backgroundColor: '#fff',
-        // color: '#666666',
-        '&:hover': {
-            backgroundColor: '#087059',
-            color: '#fff',
-        },
+        backgroundColor: '#171717',
+        color: '#fff',
     },
     listItemActive: {
         margin: 3,
-        backgroundColor: '#087059',
+        backgroundColor: '#171717',
         // color: '#fff',
     }
 });
@@ -69,134 +70,45 @@ class Drawer extends Component {
         return (
             <React.Fragment>
                 <IconButton edge="start" onClick={this.handleClickOpen} aria-label="close">
-                    <MenuIcon />
+                    <MenuIcon style={{ color: 'white' }} />
                 </IconButton>
-                <Dialog fullScreen open={open} onClose={this.handleClose} TransitionComponent={Transition}>
-                    <AppBar className={classes.appBar} style={{ backgroundColor: '#fff', fontFamily: '"Noto Sans KR", sans-serif', }}>
-                        <Toolbar>
-                            <Typography
-                                variant="h6"
-                                onClick={() => this.props.history.push('/')}
-                                style={{
-                                    textAlign: 'center',
-                                    verticalAlign: 'middle',
-                                    display: 'inline-block',
-                                    width: '80%',
-                                    color: '#666666',
-                                    fontWeight: "bold",
-                                }}>
-                                Shaheer Enterprises
-                        </Typography>
-                            <IconButton edge="start" color="black" onClick={this.handleClose} aria-label="close">
+                <Dialog fullScreen open={open} onClose={this.handleClose} TransitionComponent={Transition} className={classes.root}>
+                    <AppBar className={classes.appBar} style={{ backgroundColor: '#171717' }}>
+                        <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <div className="logo-box">
+                                <Link style={{ textDecoration: 'none' }} to='/'>
+                                    <Typography variant="h6" id="my-logo" className="developer-name">
+                                        &lt;
+                                        Talha Khalid
+                                        /&gt;
+                                </Typography>
+                                </Link>
+                            </div>
+                            <IconButton edge="start" style={{ color: 'white' }} onClick={this.handleClose} aria-label="close">
                                 <CloseIcon />
                             </IconButton>
                         </Toolbar>
                     </AppBar>
-                    <React.Fragment>
-                        <List component="nav">
-                            <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                    <HomeIcon style={{ fontSize: 21, color: 'inherit' }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Home" />
-                            </ListItem>
-                            <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                    <InfoIcon style={{ fontSize: 21, color: 'inherit' }} />
-                                </ListItemIcon>
-                                <ListItemText primary="About" />
-                            </ListItem>
-                            <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                    <WorkIcon style={{ fontSize: 21, color: 'inherit' }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Services" />
-                            </ListItem>
-                            <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                    <HomeIcon style={{ fontSize: 21, color: 'inherit' }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Find Property" />
-                            </ListItem>
-                            <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                    <ContactPhoneIcon style={{ fontSize: 21, color: 'inherit' }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Contact" />
-                            </ListItem>
-                        </List>
-                        <Divider />
-                        {isUserLoggedIn &&
-                            <List
-                                component="nav"
-                                subheader={
-                                    <ListSubheader component="div" style={{ position: 'relative', top: 0, zIndex: 1, }}>
-                                        Account
-                                     </ListSubheader>
-                                }>
-                                <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                    <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                        <FaRegUserCircle style={{ fontSize: 21, color: 'inherit' }} />
-                                    </ListItemIcon>
-                                    <ListItemText primary="My Account" />
-                                </ListItem>
-                                <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                    <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                        <MdReceipt style={{ fontSize: 21, color: 'inherit' }} />
-                                    </ListItemIcon>
-                                    <ListItemText primary="My Wishlist" />
-                                </ListItem>
-                            </List>
-                        }
-                        <Divider />
-                        <List
-                            component="nav"
-                            subheader={
-                                <ListSubheader component="div" style={{ position: 'relative', top: 0, zIndex: 1, }}>
-                                    Help & Settings
-                        </ListSubheader>
-                            }>
-                            {isUserLoggedIn &&
-                                <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                    <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                        <FiSettings style={{ fontSize: 21, color: 'inherit' }} />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Account Settings" />
-                                </ListItem>
-                            }
-                            <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                    <GiHelp style={{ fontSize: 21, color: 'inherit' }} />
-                                </ListItemIcon>
-                                <ListItemText primary="Help" />
-                            </ListItem>
-                            {isUserLoggedIn ?
-                                <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
-                                    <ListItemIcon style={{ minWidth: '40px', width: '40px', color: 'inherit' }}>
-                                        <ExitToAppIcon style={{ fontSize: 21, color: 'inherit' }} />
-                                    </ListItemIcon>
-                                    <ListItemText primary="Logout" />
-                                </ListItem>
-                                :
-                                <div
-                                    style={{
-                                        justifyContent: 'center',
-                                        alignContent: 'center',
-                                        width: '100%',
-                                        display: 'inline-flex'
-                                    }}>
-                                    <Button
-                                        variant="contained"
-                                        style={{
-                                            color: '#fff',
-                                            backgroundColor: '#087059',
-                                            width: '80%',
-                                            marginTop: 50
-                                        }}>Login</Button>
-                                </div>
-                            }
-                        </List>
-                    </React.Fragment>
+                    <List component="nav">
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                            <ListItemText primary="About" />
+                        </ListItem>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                            <ListItemText primary="Skills" />
+                        </ListItem>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                            <ListItemText primary="Education" />
+                        </ListItem>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                            <ListItemText primary="Experience" />
+                        </ListItem>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                            <ListItemText primary="Projects" />
+                        </ListItem>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
+                            <ListItemText primary="Contact" />
+                        </ListItem>
+                    </List>
                 </Dialog>
             </React.Fragment>
         );
@@ -208,26 +120,18 @@ class Drawer extends Component {
             <AppBar
                 position="fixed"
                 className={classes.mobileAppBar}
-                style={{ backgroundColor: '#fff', fontFamily: '"Noto Sans KR", sans-serif', }} >
-                <Container maxWidth="md">
+                style={{ backgroundColor: '#171717', fontFamily: '"Noto Sans KR", sans-serif', }} >
+                <Container maxWidth="md" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div className="logo-box">
+                        <Link style={{ textDecoration: 'none' }} to='/'>
+                            <Typography variant="h6" id="my-logo" className="developer-name">
+                                &lt;
+                                Talha Khalid
+                                /&gt;
+                                </Typography>
+                        </Link>
+                    </div>
                     {this.renderMenu()}
-                    <Typography
-                        variant="h6"
-                        onClick={() => this.props.history.push('/')}
-                        style={{
-                            textAlign: 'center',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            verticalAlign: 'middle',
-                            display: 'inline-flex',
-                            width: '80%',
-                            height: 60,
-                            color: '#087059',
-                            fontWeight: "bold",
-
-                        }}>
-                        Shaheer Enterprises
-                        </Typography>
                 </Container>
             </AppBar>
         )
