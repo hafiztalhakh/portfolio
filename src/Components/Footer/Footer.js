@@ -5,7 +5,7 @@ import axios from "axios";
 import Profile from "./Components/Profile";
 import FooterNormal from "./Components/NormalFooter";
 
-import { openSource } from "../../Portfolio/portfolio";
+import { openSource,customColorTheme } from "../../Portfolio/portfolio";
 
 const styles = makeStyles(theme => ({
     normalText: {
@@ -46,9 +46,9 @@ export default function Footer() {
                 <Container maxWidth="lg">
                     <Profile prof={prof} />
                 </Container>
-                <Divider style={{ background: "#087059", marginTop: 20 }} />
+                <Divider style={{ background: customColorTheme.color, marginTop: 20 }} />
                 <div className={creditDiv}>
-                    <Typography className={normalText} style={{ padding: 20, color: "#087059" }}>
+                    <Typography className={normalText} style={{ padding: 20, color: customColorTheme.color }}>
                         All Rights Reserved By Talha Khalid
                     </Typography>
                 </div>

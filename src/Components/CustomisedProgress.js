@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
+import {customColorTheme} from '../Portfolio/portfolio';
+
 const BorderLinearProgress = withStyles((theme) => ({
     root: {
         height: 10,
@@ -12,7 +14,7 @@ const BorderLinearProgress = withStyles((theme) => ({
     },
     bar: {
         borderRadius: 5,
-        backgroundColor: '#087059',
+        backgroundColor: customColorTheme.color,
     },
 }))(LinearProgress);
 

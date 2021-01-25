@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Grid, makeStyles, Paper } from '@material-ui/core';
 
-import KULogo from '../../../Assets/Images/Group 29.png';
-import JouharDegree from '../../../Assets/Images/jouhar.jpg';
-import TheEducators from '../../../Assets/Images/the-educators-1.jpg';
+import { customColorTheme, education } from '../../../Portfolio/portfolio';
 
 const styles = makeStyles(theme => ({
     sectionTitleContainer: {
@@ -18,7 +16,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#087059',
+        backgroundColor: customColorTheme.color,
         height: 5,
         borderRadius: 40
     },
@@ -44,7 +42,7 @@ const styles = makeStyles(theme => ({
         }
     },
     instituteStyle: {
-        color: '#087059',
+        color: customColorTheme.color,
         fontSize: 22,
         marginTop: 0,
         marginBottom: 10,
@@ -77,37 +75,6 @@ export default function Education() {
         text
     } = classes;
 
-    const [data, setData] = useState([
-        {
-            institute: "University of Karachi",
-            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqJbygFbHKsmbRig9tI1e1gNM5RI1qspw1gw&usqp=CAU',
-            duration: "January 2017 - January 2021",
-            degree: "Bachelor Of Science In Computer Science",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-        {
-            img: JouharDegree,
-            institute: "PECHS Edu Found Govt Sci College",
-            degree: "Pre-Engineering",
-            duration: "2013 - 2016",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-        {
-            img: TheEducators,
-            institute: "The Educators",
-            degree: "Matriculation",
-            duration: "2001 - 2013",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-        {
-            img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqJbygFbHKsmbRig9tI1e1gNM5RI1qspw1gw&usqp=CAU',
-            institute: "University of Karachi",
-            degree: "Bachelor Of Science In Computer Science",
-            duration: "January 2017 - January 2021",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-        },
-    ])
-
     return (
         <Container maxWidth="lg">
             <div className={sectionTitleContainer}>
@@ -118,8 +85,8 @@ export default function Education() {
             </div>
             <Grid container spacing={3}>
                 {
-                    data && data.length &&
-                    data.map((el, i) => (
+                    education && education.length &&
+                    education.map((el, i) => (
                         <Grid item sm={12} md={6}>
                             <Paper elevation={3} className={paper}>
                                 <Grid container>

@@ -1,8 +1,9 @@
 import React from "react";
 import { makeStyles, Paper } from '@material-ui/core';
 import { Fade } from "react-reveal";
-
 import { GoRepo } from 'react-icons/go'
+
+import {customColorTheme} from '../Portfolio/portfolio';
 
 const styles = makeStyles(theme => ({
     paper: {
@@ -22,7 +23,7 @@ const styles = makeStyles(theme => ({
     repoName: {
         whiteSpace: 'nowrap',
         textOverflow: 'ellipsis',
-        color: '#ffff00',
+        color: customColorTheme.color,
         marginBottom: '0.75rem',
         fontSize: 25,
         fontWeight: '700',

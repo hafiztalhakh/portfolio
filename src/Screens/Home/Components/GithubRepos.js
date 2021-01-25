@@ -4,6 +4,8 @@ import { Fade } from "react-reveal";
 import ApolloClient from "apollo-boost";
 import { gql } from "apollo-boost";
 
+import { customColorTheme } from '../../../Portfolio/portfolio';
+
 import GithubRepoCard from "../../../Components/GithubRepoCard";
 import { openSource, socialMediaLinks } from "../../../Portfolio/portfolio";
 
@@ -20,7 +22,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#087059',
+        backgroundColor: customColorTheme.color,
         height: 5,
         borderRadius: 40
     },

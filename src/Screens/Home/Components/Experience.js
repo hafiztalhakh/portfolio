@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
 
-import Freelancing from '../../../Assets/Images/freelancing.svg';
-import Novasoft from '../../../Assets/Images/logo.png';
+import { customColorTheme, experience } from '../../../Portfolio/portfolio';
 
 const styles = makeStyles(theme => ({
     sectionTitleContainer: {
@@ -17,7 +16,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#087059',
+        backgroundColor: customColorTheme.color,
         height: 5,
         borderRadius: 40
     },
@@ -53,7 +52,7 @@ const styles = makeStyles(theme => ({
         fontWeight: 'normal'
     },
     occupationTitle: {
-        color: '#087059',
+        color: customColorTheme.color,
         fontSize: 20,
         margin: "20px 0",
     },
@@ -82,32 +81,8 @@ export default function Experience() {
         jobTitle,
         occupationTitle,
         experienceDate,
-        text,
-
+        text
     } = classes;
-
-    const [data, setData] = useState([
-        {
-            img: Freelancing,
-            experienceName: "FREELANCING",
-            experienceOccup: "FULL STACK DEVELOPER",
-            experienceDate: "JUNE 2019 - Present",
-            experienceDetails: `
-            Creating rich proefssional web applications
-            Created various Portfolio websites
-            CRM Development`,
-        },
-        {
-            img: Novasoft,
-            experienceName: "TechNest",
-            experienceOccup: "SOFTWARE ENGINEER",
-            experienceDate: "JUNE 2019 - 2020",
-            experienceDetails: `
-            Designs and creates professional web applications
-            Checks feasibility of software prototypes
-            Modifies code to fix errors`,
-        },
-    ])
 
     return (
         <Container maxWidth="md">
@@ -119,8 +94,8 @@ export default function Experience() {
             </div>
             <Grid container spacing={3}>
                 {
-                    data && data.length &&
-                    data.map((el, i) => (
+                    experience && experience.length &&
+                    experience.map((el, i) => (
                         <Grid item sm={12} md={6}>
                             <Paper elevation={3} className={paper}>
                                 <div className={displayCenter}>

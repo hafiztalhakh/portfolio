@@ -3,6 +3,7 @@ import { Container, Grid, makeStyles, Button, useTheme, useMediaQuery } from '@m
 import { withRouter } from 'react-router-dom';
 
 import Image01 from '../../../Assets/Images/Group 34.png';
+import { customColorTheme, about } from '../../../Portfolio/portfolio';
 
 const styles = makeStyles(theme => ({
     textContainer: {
@@ -27,17 +28,17 @@ const styles = makeStyles(theme => ({
             display: 'block',
             height: 7,
             width: '100%',
-            backgroundColor: '#087059',
+            backgroundColor: customColorTheme.color,
             borderRadius: 5,
             marginTop: 5
         }
     },
     hi: {
-        color: '#087059',
+        color: customColorTheme.color,
         marginBottom: -10
     },
     developeName: {
-        color: '#087059'
+        color: customColorTheme.color
     },
     text: {
         color: '#9F9F9F',
@@ -90,9 +91,9 @@ const About = () => {
                     <div>
                         <div className={textContainer}>
                             <h1 className={hi}>Hi!</h1>
-                            <h4 style={{ fontWeight: 'normal' }}>My name is <strong className={developeName}>Talha Khalid</strong></h4>
+                            <h4 style={{ fontWeight: 'normal' }}>My name is <strong className={developeName}>{about.developerName}</strong></h4>
                             <p className="text-info left-text">
-                                I am from Pakistan and currently living in Karachi. I am doing Bachelor's in Software engineering and I will graduate in the year 2021. I am Ui Ux designer and currently working as a freelancer.
+                                {about.aboutText}
                             </p>
                             <Button
                                 variant="contain"

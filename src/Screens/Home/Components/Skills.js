@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Grid, makeStyles, Typography, Paper } from '@material-ui/core';
 
-import HTML from '../../../Assets/Images/Mask Group 22.png';
-import ReactIcon from '../../../Assets/Images/react.svg';
-import NodeIcon from '../../../Assets/Images/nodejs.svg';
-import ExpressIcon from '../../../Assets/Images/expressjs.png';
-import MongoDbIcon from '../../../Assets/Images/mongodb.svg';
-import SqlDatabase from '../../../Assets/Images/sql-database.svg';
-import CSSIcon from '../../../Assets/Images/css-3.svg';
-import GithubIcon from '../../../Assets/Images/github.svg';
-import JavascriptIcon from '../../../Assets/Images/javascript.svg';
+import { customColorTheme, skillSet } from '../../../Portfolio/portfolio';
 
 const styles = makeStyles(theme => ({
     sectionTitleContainer: {
@@ -24,7 +16,7 @@ const styles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#087059',
+        backgroundColor: customColorTheme.color,
         height: 5,
         borderRadius: 40
     },
@@ -79,52 +71,6 @@ export default function Skills() {
         mongooseStyle,
         skillName
     } = classes;
-    const [data, setData] = useState([
-        {
-            skill: "MongoDB",
-            icon: MongoDbIcon,
-        },
-        {
-            skill: "Express",
-            icon: ExpressIcon,
-        },
-        {
-            skill: "ReactJS",
-            icon: ReactIcon,
-        },
-        {
-            skill: "NodeJS",
-            icon: NodeIcon,
-        },
-        {
-            skill: "React Native",
-            icon: ReactIcon,
-        },
-        {
-            skill: "Mongoose",
-            icon: null,
-        },
-        {
-            skill: "SQL Database",
-            icon: SqlDatabase,
-        },
-        {
-            skill: "Javascript",
-            icon: JavascriptIcon,
-        },
-        {
-            skill: "HTML",
-            icon: HTML,
-        },
-        {
-            skill: "CSS3",
-            icon: CSSIcon,
-        },
-        {
-            skill: "Github",
-            icon: GithubIcon,
-        },
-    ])
 
     return (
         <Container maxWidth="md">
@@ -136,8 +82,8 @@ export default function Skills() {
             </div>
             <Grid container spacing={3}>
                 {
-                    data && data.length &&
-                    data.map((el, i) => (
+                    skillSet && skillSet.length &&
+                    skillSet.map((el, i) => (
                         <Grid item xs={6} sm={4} md={3}>
                             <Paper elevation={3} className={classes.paper} key={i}>
                                 {

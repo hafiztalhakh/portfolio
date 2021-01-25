@@ -9,7 +9,7 @@ import EmailIcon from '@material-ui/icons/Email';
 import githubIcon from '../../../Assets/Images/github (1).svg';
 import linkedInIcon from '../../../Assets/Images/linkedin.svg';
 import facebbokIcon from '../../../Assets/Images/facebook.svg';
-import { contactInfo, about, socialMediaLinks } from "../../../Portfolio/portfolio";
+import { contactInfo, about, socialMediaLinks, customColorTheme } from "../../../Portfolio/portfolio";
 
 const styles = makeStyles(theme => ({
     textContainer: {
@@ -35,6 +35,7 @@ const styles = makeStyles(theme => ({
     profileImage: {
         borderRadius: '50%',
         border: '0.5rem solid #6c63ff',
+        borderColor: customColorTheme.color,
         marginLeft: 'auto',
         width: '100%',
         maxWidth: 350,
@@ -45,7 +46,7 @@ const styles = makeStyles(theme => ({
         }
     },
     oppurtunityBool: {
-        color: '#087059'
+        color: customColorTheme.color
     },
     contactMe: {
         marginLeft: 5
@@ -54,7 +55,7 @@ const styles = makeStyles(theme => ({
         minWidth: 30
     },
     icons: {
-        color: '#087059'
+        color: customColorTheme.color
     },
     contactLinks: {
         textDecoration: 'none',

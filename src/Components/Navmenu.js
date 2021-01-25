@@ -7,7 +7,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 import { about } from "../Portfolio/portfolio";
 
-
 const styles = theme => ({
     root: {
         "& .MuiDialog-paperFullScreen": {

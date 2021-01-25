@@ -4,8 +4,7 @@ import { Container, Grid, Paper, Typography } from '@material-ui/core';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import Project1 from '../../../Assets/Project Images/Project1.png';
-import pic1 from '../../../Assets/Work/logo.jpg'
+import { customColorTheme, projects } from '../../../Portfolio/portfolio';
 
 const useStyles = makeStyles(theme => ({
     sectionTitleContainer: {
@@ -20,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: '#087059',
+        backgroundColor: customColorTheme.color,
         height: 5,
         borderRadius: 40
     },
@@ -61,9 +60,7 @@ const responsive = {
     0: { items: 1 },
     568: { items: 2 },
     1024: { items: 3 },
-};
-
-
+}
 
 export default function Projects() {
     const classes = useStyles();
@@ -77,34 +74,6 @@ export default function Projects() {
         workTitle,
         text
     } = classes;
-
-    const [data, setData] = useState([
-        {
-            img: pic1,
-            workName: "Giverpays",
-            link: "https://giverpays.com/"
-        },
-        {
-            img: Project1,
-            workName: "Yout Event Organizer",
-            link: "https://youtheventorganizer.com/"
-        },
-        {
-            img: Project1,
-            workName: "LIS for PCMD - ICCBS",
-            link: "https://pcmd-lab.herokuapp.com/"
-        },
-        {
-            img: Project1,
-            workName: "Shaheer Enterprises",
-            link: "https://shaheerenterprises.com/"
-        },
-        {
-            img: Project1,
-            workName: "Hazir Sain",
-            link: "https://hazirsain.com/"
-        },
-    ])
 
     return (
         <Container maxWidth="lg" style={{ marginTop: 60 }}>
@@ -120,8 +89,8 @@ export default function Projects() {
             <AliceCarousel
                 mouseTracking
                 items={
-                    data && data.length &&
-                    data.map((el, i) => (
+                    projects && projects.length &&
+                    projects.map((el, i) => (
                         <Paper key={i} elevation={3} className={paper}>
                             <div className={displayCenter}>
                                 <img src={el.img} alt={el.workName} className={image} />
