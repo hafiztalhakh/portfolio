@@ -1,6 +1,7 @@
 import React from 'react';
-import { Container, Grid, makeStyles, Button, useTheme, useMediaQuery } from '@material-ui/core';
+import { Container, Grid, makeStyles, useTheme, useMediaQuery } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
+import { Fade } from "react-reveal";
 
 import Image01 from '../../../Assets/Images/Group 34.png';
 import { customColorTheme, about } from '../../../Portfolio/portfolio';
@@ -101,25 +102,32 @@ const About = () => {
                                 {about.aboutText}
                             </p>
                             <div style={{ height: 10 }} />
-                            <a
-                                href={about.resumeLink}
-                                target="blank"
-                                className={btn}
-                            >
-                                CONTACT ME
-                            </a>
+                            <Fade bottom duration={1000} distance="100px">
+                                <div>
+                                    <a
+                                        href={about.resumeLink}
+                                        target="blank"
+                                        className={btn}
+                                    >
+                                        CONTACT ME
+                                    </a>
+                                </div>
+                            </Fade>
                         </div>
                     </div>
 
                 </Grid>
                 {
                     smallScreens &&
+
                     <Grid item sm={6} md={6}>
-                        <img src={Image01} alt="image01" className={image01Style} />
+                        <Fade right duration={1000}>
+                            <img src={Image01} alt="image01" className={image01Style} />
+                        </Fade>
                     </Grid>
                 }
             </Grid>
-        </Container>
+        </Container >
     )
 }
 

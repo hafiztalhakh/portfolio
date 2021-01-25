@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Grid, makeStyles, Paper } from '@material-ui/core';
+import { Fade } from "react-reveal";
 
 import { customColorTheme, education } from '../../../Portfolio/portfolio';
 
@@ -83,32 +84,34 @@ export default function Education() {
                 <div className={underline} />
                 </h1>
             </div>
-            <Grid container spacing={3}>
-                {
-                    education && education.length &&
-                    education.map((el, i) => (
-                        <Grid item sm={12} md={6}>
-                            <Paper elevation={3} className={paper}>
-                                <Grid container>
-                                    <Grid item xs={4} sm={3}>
-                                        <img
-                                            src={el.img}
-                                            alt={`institute-pic${i}`}
-                                            className={eduLogo}
-                                        />
+            <Fade bottom duration={1000} distance="100px">
+                <Grid container spacing={3}>
+                    {
+                        education && education.length &&
+                        education.map((el, i) => (
+                            <Grid item sm={12} md={6}>
+                                <Paper elevation={3} className={paper}>
+                                    <Grid container>
+                                        <Grid item xs={4} sm={3}>
+                                            <img
+                                                src={el.img}
+                                                alt={`institute-pic${i}`}
+                                                className={eduLogo}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={8} sm={9}>
+                                            <h4 className={instituteStyle}>{el.institute}</h4>
+                                            <p className={infoDegree}>{el.degree}</p>
+                                            <p className={infoDegree}>{el.duration}</p>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item xs={8} sm={9}>
-                                        <h4 className={instituteStyle}>{el.institute}</h4>
-                                        <p className={infoDegree}>{el.degree}</p>
-                                        <p className={infoDegree}>{el.duration}</p>
-                                    </Grid>
-                                </Grid>
-                                <p className={text}>{el.description}</p>
-                            </Paper>
-                        </Grid>
-                    ))
-                }
-            </Grid>
+                                    <p className={text}>{el.description}</p>
+                                </Paper>
+                            </Grid>
+                        ))
+                    }
+                </Grid>
+            </Fade>
         </Container>
     )
 }
