@@ -14,7 +14,7 @@ import KULogo from '../Assets/Images/Group 29.png';
 import JouharDegree from '../Assets/Images/jouhar.jpg';
 import TheEducators from '../Assets/Images/the-educators-1.jpg';
 import Freelancing from '../Assets/Images/freelancing.svg';
-import Novasoft from '../Assets/Images/logo.png';
+import TechNest from '../Assets/Images/logo-white.jpg';
 import Project1 from '../Assets/Project Images/Project1.png';
 import pic1 from '../Assets/Work/logo.jpg'
 
@@ -124,7 +124,7 @@ const experience = [
         CRM Development`,
     },
     {
-        img: Novasoft,
+        img: TechNest,
         experienceName: "TechNest",
         experienceOccup: "SOFTWARE ENGINEER",
         experienceDate: "JUNE 2019 - 2020",
