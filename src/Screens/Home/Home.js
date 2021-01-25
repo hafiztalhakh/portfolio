@@ -9,6 +9,7 @@ import Education from './Components/Education';
 import Experience from './Components/Experience';
 import Proficiency from './Components/Proficiency';
 import Projects from './Components/Projects';
+import GithubRepo from './Components/GithubRepos';
 
 const useStyles = makeStyles(theme => ({
     paddingBlockTop: {
@@ -43,6 +44,8 @@ function Home() {
             <Proficiency />
             <div className={classes.paddingBlock} />
             <Projects />
+            <div className={classes.paddingBlock} />
+            <GithubRepo />
         </Fragment >
     );
 }
