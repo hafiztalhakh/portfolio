@@ -46,9 +46,9 @@ export default function Footer() {
                 <Container maxWidth="lg">
                     <Profile prof={prof} />
                 </Container>
-                <Divider style={{ background: customColorTheme.color, marginTop: 20 }} />
+                <Divider style={{ background: customColorTheme.primaryColor, marginTop: 20 }} />
                 <div className={creditDiv}>
-                    <Typography className={normalText} style={{ padding: 20, color: customColorTheme.color }}>
+                    <Typography className={normalText} style={{ padding: 20, color: customColorTheme.primaryColor }}>
                         All Rights Reserved By Talha Khalid
                     </Typography>
                 </div>

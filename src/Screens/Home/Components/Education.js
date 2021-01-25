@@ -11,12 +11,12 @@ const styles = makeStyles(theme => ({
         marginBottom: 30
     },
     sectionTitle: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 36,
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: customColorTheme.color,
+        backgroundColor: customColorTheme.primaryColor,
         height: 5,
         borderRadius: 40
     },
@@ -27,8 +27,8 @@ const styles = makeStyles(theme => ({
         height: 'auto',
         width: 'auto',
         padding: 20,
-        backgroundColor: '#171717',
-        color: '#fff',
+        backgroundColor: customColorTheme.backgroundColor,
+        color: customColorTheme.defaultColor,
         boxShadow: '10px 20px 30px #0000004D',
 
     },
@@ -42,14 +42,14 @@ const styles = makeStyles(theme => ({
         }
     },
     instituteStyle: {
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         fontSize: 22,
         marginTop: 0,
         marginBottom: 10,
         fontWeight: 'normal'
     },
     infoDegree: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 16,
         marginTop: 5,
         marginBottom: 5,

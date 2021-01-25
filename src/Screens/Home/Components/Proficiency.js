@@ -13,12 +13,12 @@ const styles = makeStyles(theme => ({
         marginBottom: 30
     },
     sectionTitle: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 36,
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: customColorTheme.color,
+        backgroundColor: customColorTheme.primaryColor,
         height: 5,
         borderRadius: 40
     },
@@ -38,7 +38,7 @@ const styles = makeStyles(theme => ({
     },
     skill: {
         fontSize: 26,
-        color: "white",
+        color: customColorTheme.defaultColor,
         padding: 20,
     }
 }));

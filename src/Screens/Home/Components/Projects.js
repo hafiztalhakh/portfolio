@@ -14,12 +14,12 @@ const useStyles = makeStyles(theme => ({
         marginBottom: 30
     },
     sectionTitle: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 36,
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: customColorTheme.color,
+        backgroundColor: customColorTheme.primaryColor,
         height: 5,
         borderRadius: 40
     },
@@ -30,8 +30,8 @@ const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: 'auto',
         padding: '40px 30px',
-        backgroundColor: '#171717',
-        color: '#fff',
+        backgroundColor: customColorTheme.backgroundColor,
+        color: customColorTheme.defaultColor,
         boxShadow: '10px 20px 30px #0000004D',
 
     },
@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
     description: {
         backgroundColor: "#0A0A0A",
         fontSize: 16,
-        color: "white",
+        color: customColorTheme.defaultColor,
         textAlign: "center",
         paddingTop: 20,
     }

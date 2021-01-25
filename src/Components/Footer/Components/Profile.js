@@ -12,21 +12,18 @@ import facebbokIcon from '../../../Assets/Images/facebook.svg';
 import { contactInfo, about, socialMediaLinks, customColorTheme } from "../../../Portfolio/portfolio";
 
 const styles = makeStyles(theme => ({
-    textContainer: {
-        // position: 'relative',
-        [theme.breakpoints.up('md')]: {
-            marginLeft: 110
-        }
+    profileContainer:{
+        color: customColorTheme.defaultColor
     },
     developerName: {
         fontFamily: 'Brush Script MT !important',
         fontSize: 30,
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         font: 'bold',
     },
     mainName: {
         fontSize: 32,
-        color: "#fff",
+        color: customColorTheme.defaultColor,
         textDecoration: 'none'
     },
     imageContentProfile: {
@@ -41,7 +38,7 @@ const styles = makeStyles(theme => ({
     profileImage: {
         borderRadius: '50%',
         border: '0.5rem solid #6c63ff',
-        borderColor: customColorTheme.color,
+        borderColor: customColorTheme.primaryColor,
         marginLeft: 'auto',
         width: '100%',
         maxWidth: 350,
@@ -52,7 +49,7 @@ const styles = makeStyles(theme => ({
         }
     },
     oppurtunityBool: {
-        color: customColorTheme.color
+        color: customColorTheme.primaryColor
     },
     contactMe: {
         marginLeft: 5
@@ -61,7 +58,7 @@ const styles = makeStyles(theme => ({
         minWidth: 30
     },
     icons: {
-        color: customColorTheme.color
+        color: customColorTheme.primaryColor
     },
     contactLinks: {
         textDecoration: 'none',
@@ -74,6 +71,7 @@ export default function GithubProfileCard({ prof }) {
     const dektopScreen = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = styles();
     const {
+        profileContainer,
         mainName,
         developerName,
         imageContentProfile,
@@ -92,7 +90,7 @@ export default function GithubProfileCard({ prof }) {
     }
     return (
         <Fade bottom duration={1000} distance="20px">
-            <div className="main" id="contact">
+            <div className={profileContainer} id="contact">
                 <Grid container>
                     {
                         !dektopScreen &&

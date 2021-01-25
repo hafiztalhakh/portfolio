@@ -15,7 +15,7 @@ const styles = makeStyles(theme => ({
     title: {
         display: 'inline-block',
         position: 'relative',
-        color: "#fff",
+        color: customColorTheme.defaultColor,
         fontSize: 30,
         fontWeight: 'bold',
         wordSpacing: 9,
@@ -28,17 +28,17 @@ const styles = makeStyles(theme => ({
             display: 'block',
             height: 7,
             width: '100%',
-            backgroundColor: customColorTheme.color,
+            backgroundColor: customColorTheme.primaryColor,
             borderRadius: 5,
             marginTop: 5
         }
     },
     hi: {
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         marginBottom: -10
     },
     developeName: {
-        color: customColorTheme.color
+        color: customColorTheme.primaryColor
     },
     text: {
         color: '#9F9F9F',
@@ -49,10 +49,15 @@ const styles = makeStyles(theme => ({
     },
     btn: {
         backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #087059 0%, rgb(119 115 14 / 71%) 100%)',
-        color: 'white',
+        color: customColorTheme.defaultColor,
         width: 180,
-        padding: 10,
+        padding: '15px 30px',
         marginTop: 30,
+        textDecoration: 'none',
+        textTransform: 'uppercase',
+        borderRadius: 4,
+        textAlign: 'center',
+        fontWeight: 'normal'
     },
     image01Style: {
         width: '90%',
@@ -95,10 +100,14 @@ const About = () => {
                             <p className={text}>
                                 {about.aboutText}
                             </p>
-                            <Button
-                                variant="contain"
+                            <div style={{ height: 10 }} />
+                            <a
+                                href={about.resumeLink}
+                                target="blank"
                                 className={btn}
-                            >CONTACT ME</Button>
+                            >
+                                CONTACT ME
+                            </a>
                         </div>
                     </div>
 

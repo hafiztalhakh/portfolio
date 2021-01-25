@@ -11,12 +11,12 @@ const styles = makeStyles(theme => ({
         marginBottom: 30
     },
     sectionTitle: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 36,
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: customColorTheme.color,
+        backgroundColor: customColorTheme.primaryColor,
         height: 5,
         borderRadius: 40
     },
@@ -27,8 +27,8 @@ const styles = makeStyles(theme => ({
         height: 'auto',
         width: 'auto',
         padding: '40px 30px',
-        backgroundColor: '#171717',
-        color: '#fff',
+        backgroundColor: customColorTheme.backgroundColor,
+        color: customColorTheme.defaultColor,
         boxShadow: '10px 20px 30px #0000004D',
         minHeight: 430
     },
@@ -52,12 +52,12 @@ const styles = makeStyles(theme => ({
         fontWeight: 'normal'
     },
     occupationTitle: {
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         fontSize: 20,
         margin: "20px 0",
     },
     experienceDate: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 16,
         margin: "20px 0"
     },

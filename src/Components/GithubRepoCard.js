@@ -10,8 +10,8 @@ const styles = makeStyles(theme => ({
         height: 'auto',
         width: 'auto',
         padding: '40px 30px',
-        backgroundColor: '#171717',
-        color: '#fff',
+        backgroundColor: customColorTheme.backgroundColor,
+        color: customColorTheme.defaultColor,
         boxShadow: '10px 20px 30px #0000004D',
         minHeight: 160,
         cursor: 'pointer',
@@ -23,7 +23,7 @@ const styles = makeStyles(theme => ({
     repoName: {
         whiteSpace: 'nowrap',
         textOverflow: 'ellipsis',
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         marginBottom: '0.75rem',
         fontSize: 25,
         fontWeight: '700',
@@ -66,7 +66,7 @@ const styles = makeStyles(theme => ({
     repoSvg: {
         marginRight: ' 0.5rem',
         minWidth: 16,
-        color: 'white'
+        color: customColorTheme.defaultColor
     },
     repoStarSvg: {
         marginRight: ' 0.3rem'

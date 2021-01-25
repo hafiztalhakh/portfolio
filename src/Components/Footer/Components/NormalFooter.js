@@ -17,12 +17,12 @@ const styles = theme => ({
     },
     mainName: {
         fontSize: 32,
-        color: "#fff",
+        color: customColorTheme.defaultColor,
         textDecoration: 'none'
     },
     secondaryText: {
         fontSize: 16,
-        color: "#fff",
+        color: customColorTheme.defaultColor,
         fontStyle: "italic",
     },
     normalText: {

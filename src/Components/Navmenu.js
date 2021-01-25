@@ -10,7 +10,7 @@ import { about, customColorTheme } from "../Portfolio/portfolio";
 const styles = theme => ({
     root: {
         "& .MuiDialog-paperFullScreen": {
-            backgroundColor: '#171717'
+            backgroundColor: customColorTheme.backgroundColor
         }
     },
     appBar: {
@@ -19,7 +19,7 @@ const styles = theme => ({
     developerName: {
         fontFamily: 'Brush Script MT !important',
         fontSize: 30,
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         font: 'bold',
     },
     title: {
@@ -27,13 +27,13 @@ const styles = theme => ({
         flex: 1,
     },
     listItem: {
-        backgroundColor: '#171717',
-        color: '#fff',
+        backgroundColor: customColorTheme.backgroundColor,
+        color: customColorTheme.defaultColor,
     },
     listItemActive: {
         margin: 3,
-        backgroundColor: '#171717',
-        // color: '#fff',
+        backgroundColor: customColorTheme.backgroundColor,
+        // color: customColorTheme.defaultColor,
     }
 });
 
@@ -68,10 +68,10 @@ class Drawer extends Component {
         return (
             <React.Fragment>
                 <IconButton edge="start" onClick={this.handleClickOpen} aria-label="close">
-                    <MenuIcon style={{ color: 'white' }} />
+                    <MenuIcon style={{ color: customColorTheme.defaultColor }} />
                 </IconButton>
                 <Dialog fullScreen open={open} onClose={this.handleClose} TransitionComponent={Transition} className={classes.root}>
-                    <AppBar className={classes.appBar} style={{ backgroundColor: '#171717' }}>
+                    <AppBar className={classes.appBar} style={{ backgroundColor: customColorTheme.backgroundColor }}>
                         <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <div className="logo-box">
                                 <Link style={{ textDecoration: 'none' }} to='/'>
@@ -82,7 +82,7 @@ class Drawer extends Component {
                                 </Typography>
                                 </Link>
                             </div>
-                            <IconButton edge="start" style={{ color: 'white' }} onClick={this.handleClose} aria-label="close">
+                            <IconButton edge="start" style={{ color: customColorTheme.defaultColor }} onClick={this.handleClose} aria-label="close">
                                 <CloseIcon />
                             </IconButton>
                         </Toolbar>
@@ -118,7 +118,7 @@ class Drawer extends Component {
             <AppBar
                 position="fixed"
                 className={classes.mobileAppBar}
-                style={{ backgroundColor: '#171717', fontFamily: '"Noto Sans KR", sans-serif', }} >
+                style={{ backgroundColor: customColorTheme.backgroundColor, fontFamily: '"Noto Sans KR", sans-serif', }} >
                 <Container maxWidth="md" style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <div className="logo-box">
                         <Link style={{ textDecoration: 'none' }} to='/'>

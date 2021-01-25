@@ -19,7 +19,9 @@ import Project1 from '../Assets/Project Images/Project1.png';
 import pic1 from '../Assets/Work/logo.jpg'
 
 const customColorTheme = {
-    color: "#087059",
+    primaryColor: "#087059",
+    secondaryColor: '#646464',
+    defaultColor: '#ffffff',
     backgroundColor: "#171717"
 };
 
@@ -27,7 +29,7 @@ const customColorTheme = {
 const about = {
     developerName: "Talha Khalid",
     aboutText: "A passionate Software Developer having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.",
-    resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
+    resumeLink: "https://drive.google.com/file/d/1l2M26CSgU5Wew6K-LWZulxCxXdiIkOib/view?usp=sharing"
 };
 
 const skillSet = [
@@ -135,7 +137,7 @@ const experience = [
 
 
 //Your Proficiency in your relative skills
-const proficiency =[
+const proficiency = [
     {
         name: "ReactJS",
         level: 95,
@@ -175,7 +177,7 @@ const proficiency =[
 ];
 
 //Your Projects
-const projects =[
+const projects = [
     {
         img: pic1,
         workName: "Giverpays",

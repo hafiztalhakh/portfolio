@@ -17,12 +17,12 @@ const styles = makeStyles(theme => ({
         marginBottom: 30
     },
     sectionTitle: {
-        color: '#fff',
+        color: customColorTheme.defaultColor,
         fontSize: 36,
         textAlign: 'center'
     },
     underline: {
-        backgroundColor: customColorTheme.color,
+        backgroundColor: customColorTheme.primaryColor,
         height: 5,
         borderRadius: 40
     },
@@ -34,7 +34,7 @@ const styles = makeStyles(theme => ({
     },
     btn: {
         backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #087059 0%, rgb(119 115 14 / 71%) 100%)',
-        color: 'white',
+        color: customColorTheme.defaultColor,
         width: 180,
         padding: 10,
         marginTop: 30,
@@ -106,7 +106,7 @@ export default function Projects() {
             })
             .then((result) => {
                 setrepoFunction(result.data.user.pinnedItems.edges);
-                console.log(result);
+                // console.log(result);
             });
     }
 

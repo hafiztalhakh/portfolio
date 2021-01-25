@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     developerName: {
         fontFamily: 'Brush Script MT !important',
         fontSize: 30,
-        color: customColorTheme.color,
+        color: customColorTheme.primaryColor,
         font: 'bold',
     }
 }));
@@ -17,7 +17,7 @@ const Navbar = () => {
     const classes = useStyles();
 
     return (
-        <AppBar position="fixed" style={{ backgroundColor: '#171717' }}>
+        <AppBar position="fixed" style={{ backgroundColor: customColorTheme.backgroundColor }}>
             <Container maxWidth="lg">
                 <Toolbar>
                     <div style={{ width: '100%' }}>
