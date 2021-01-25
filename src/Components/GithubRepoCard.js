@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, makeStyles, Paper, Button } from '@material-ui/core';
+import { makeStyles, Paper } from '@material-ui/core';
 import { Fade } from "react-reveal";
 
 import { GoRepo } from 'react-icons/go'
