@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Grid, makeStyles, Button } from '@material-ui/core';
+import { Container, Grid, makeStyles } from '@material-ui/core';
 import { Fade } from "react-reveal";
 import ApolloClient from "apollo-boost";
 import { gql } from "apollo-boost";
@@ -24,6 +24,24 @@ const styles = makeStyles(theme => ({
         height: 5,
         borderRadius: 40
     },
+    displayCenter: {
+        display: "flex",
+        justifyContent: "center",
+        width: "100%",
+        alignItems: "center",
+    },
+    btn: {
+        backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #087059 0%, rgb(119 115 14 / 71%) 100%)',
+        color: 'white',
+        width: 180,
+        padding: 10,
+        marginTop: 30,
+        textDecoration: 'none',
+        textTransform: 'uppercase',
+        borderRadius: 4,
+        textAlign: 'center',
+        fontWeight: 'normal'
+    }
 }));
 
 export default function Projects() {
@@ -32,6 +50,8 @@ export default function Projects() {
         sectionTitleContainer,
         sectionTitle,
         underline,
+        displayCenter,
+        btn
     } = classes;
     const [repo, setrepo] = useState([]);
 
@@ -109,7 +129,15 @@ export default function Projects() {
                     ))
                     }
                 </Grid>
-                {/* <Button text={"More Projects"} className="project-button" href={socialMediaLinks.github} newTab={true} /> */}
+                <div className={displayCenter}>
+                    <a
+                        href={socialMediaLinks.github}
+                        target="blank"
+                        className={btn}
+                    >
+                        More Projects
+                    </a>
+                </div>
             </Container>
         </Fade>
     );
