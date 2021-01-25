@@ -92,7 +92,7 @@ const About = () => {
                         <div className={textContainer}>
                             <h1 className={hi}>Hi!</h1>
                             <h4 style={{ fontWeight: 'normal' }}>My name is <strong className={developeName}>{about.developerName}</strong></h4>
-                            <p className="text-info left-text">
+                            <p className={text}>
                                 {about.aboutText}
                             </p>
                             <Button

@@ -18,6 +18,12 @@ const styles = makeStyles(theme => ({
             marginLeft: 110
         }
     },
+    developerName: {
+        fontFamily: 'Brush Script MT !important',
+        fontSize: 30,
+        color: customColorTheme.color,
+        font: 'bold',
+    },
     mainName: {
         fontSize: 32,
         color: "#fff",
@@ -69,6 +75,7 @@ export default function GithubProfileCard({ prof }) {
     const classes = styles();
     const {
         mainName,
+        developerName,
         imageContentProfile,
         profileImage,
         oppurtunityBool,
@@ -100,7 +107,7 @@ export default function GithubProfileCard({ prof }) {
                             dektopScreen &&
                             <div>
                                 <Link className={mainName} to='/'>
-                                    <Typography variant="h6" id="my-logo" className="developer-name">
+                                    <Typography variant="h6" id="my-logo" className={developerName}>
                                         &lt;
                                        {about.developerName}
                                         /&gt;

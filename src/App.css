@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: 'Merriweather', serif !important;
-  background-color: white;
+  
 }
 
 *:focus {
@@ -38,14 +38,6 @@ body {
   margin: 0;
   padding: 0px;
   display: inline-block;
-}
-
-.developer-name {
-  font-family: Brush Script MT !important;
-  font-size: 30px !important;
-  color: #087059 !important;
-  font: bold !important;
-  /* text-decoration: underline !important; */
 }
 
 .navigations {
@@ -95,8 +87,6 @@ body {
   transform-origin: 0 50%;
 }
 
-/* Navbar */
-
 .title-left {
   display: inline-block;
   position: relative;
@@ -123,69 +113,4 @@ body {
   background-color: #087059;
   border-radius: 5px;
   margin-top: 5px;
-}
-
-.title {
-  color: #087059;
-  font-size: 36px;
-}
-
-.text-info {
-  color: #9F9F9F;
-  font-size: 16px;
-  letter-spacing: 0.48;
-  line-height: 1.8;
-}
-
-.center-text {
-  text-align: center !important;
-}
-
-.left-text {
-  text-align: left !important;
-}
-
-.img-responsive {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.btn {
-  font-family: 'DM Sans', sans-serif !important;
-  background-color: #087059 !important;
-  color: #171717 !important;
-  font-size: 16px !important;
-  font-weight: bold !important;
-  border-radius: 0px !important;
-  height: 50px !important;
-}
-
-.btn:hover {
-  background-color: #087059 !important;
-  color: #000 !important;
-  box-shadow: 1px 2px 3px rgb(53, 52, 52);
-}
-
-.paper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;
-  width: auto;
-  padding: 20px;
-  background-color: #171717 !important;
-  color: #fff !important;
-  box-shadow: 10px 20px 30px #0000004D !important;
-}
-
-.skill .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.skill-icon {
-  font-size: 5em;
-  color: red;
 }

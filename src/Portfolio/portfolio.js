@@ -19,7 +19,8 @@ import Project1 from '../Assets/Project Images/Project1.png';
 import pic1 from '../Assets/Work/logo.jpg'
 
 const customColorTheme = {
-    color: "#087059"
+    color: "#087059",
+    backgroundColor: "#171717"
 };
 
 // Your Info
