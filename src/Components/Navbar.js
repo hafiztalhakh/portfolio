@@ -1,10 +1,20 @@
 import React from 'react';
-import { Container, Typography, AppBar, Toolbar } from '@material-ui/core';
+import { Container, Typography, AppBar, Toolbar, makeStyles } from '@material-ui/core';
 import { Link, withRouter } from 'react-router-dom';
 
-import { about } from "../Portfolio/portfolio";
+import { about, customColorTheme } from "../Portfolio/portfolio";
+
+const useStyles = makeStyles(theme => ({
+    developerName: {
+        fontFamily: 'Brush Script MT !important',
+        fontSize: 30,
+        color: customColorTheme.color,
+        font: 'bold',
+    }
+}));
 
 const Navbar = () => {
+    const classes = useStyles();
 
     return (
         <AppBar position="fixed" style={{ backgroundColor: '#171717' }}>
@@ -13,7 +23,7 @@ const Navbar = () => {
                     <div style={{ width: '100%' }}>
                         <div className="logo-box">
                             <Link style={{ textDecoration: 'none' }} to='/'>
-                                <Typography variant="h6" id="my-logo" className="developer-name">
+                                <Typography variant="h6" id="my-logo" className={classes.developerName}>
                                     &lt;
                                    {about.developerName}
                                     /&gt;

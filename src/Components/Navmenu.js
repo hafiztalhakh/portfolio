@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import { Container, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Typography, Button, Dialog, Divider, AppBar, Toolbar, IconButton, Slide } from '@material-ui/core';
+import { Container, List, ListItem, ListItemText, Typography, Dialog, AppBar, Toolbar, IconButton, Slide } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import { about } from "../Portfolio/portfolio";
+import { about, customColorTheme } from "../Portfolio/portfolio";
 
 const styles = theme => ({
     root: {
@@ -15,6 +15,12 @@ const styles = theme => ({
     },
     appBar: {
         position: 'relative',
+    },
+    developerName: {
+        fontFamily: 'Brush Script MT !important',
+        fontSize: 30,
+        color: customColorTheme.color,
+        font: 'bold',
     },
     title: {
         marginLeft: theme.spacing(2),
@@ -57,7 +63,7 @@ class Drawer extends Component {
 
     renderMenu = () => {
         const { classes } = this.props;
-        const { open, isUserLoggedIn } = this.state;
+        const { open } = this.state;
 
         return (
             <React.Fragment>
@@ -69,7 +75,7 @@ class Drawer extends Component {
                         <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
                             <div className="logo-box">
                                 <Link style={{ textDecoration: 'none' }} to='/'>
-                                    <Typography variant="h6" id="my-logo" className="developer-name">
+                                    <Typography variant="h6" className={classes.developerName}>
                                         &lt;
                                         {about.developerName}
                                         /&gt;
@@ -116,7 +122,7 @@ class Drawer extends Component {
                 <Container maxWidth="md" style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <div className="logo-box">
                         <Link style={{ textDecoration: 'none' }} to='/'>
-                            <Typography variant="h6" id="my-logo" className="developer-name">
+                            <Typography variant="h6" className={classes.developerName}>
                                 &lt;
                                 {about.developerName}
                                 /&gt;
