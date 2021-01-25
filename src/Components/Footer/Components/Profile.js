@@ -6,6 +6,9 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 
+import githubIcon from '../../../Assets/Images/github (1).svg';
+import linkedInIcon from '../../../Assets/Images/linkedin.svg';
+import facebbokIcon from '../../../Assets/Images/facebook.svg';
 import { contactInfo, about, socialMediaLinks } from "../../../Portfolio/portfolio";
 
 const styles = makeStyles(theme => ({
@@ -102,6 +105,7 @@ export default function GithubProfileCard({ prof }) {
                                         /&gt;
                                 </Typography>
                                 </Link>
+                                <div style={{ height: 20 }} />
                             </div>
                         }
                         <div className="blog-header">
@@ -153,13 +157,15 @@ export default function GithubProfileCard({ prof }) {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <p className={contactMe}>Follow Me</p>
-                                <Grid container>
-                                    <Grid item xs={12} sm={4}>
-                                        {socialMediaLinks.gith}
-                                    </Grid>
-                                    <Grid item xs={12} sm={4}></Grid>
-                                    <Grid item xs={12} sm={4}></Grid>
-                                </Grid>
+                                <a href={socialMediaLinks.github} target="blank" style={{ textDecoration: 'none', width: 60, display: 'inline-flex', justifyContent: 'center' }}>
+                                    <img src={githubIcon} alt="Github" style={{ width: 50, height: 50 }} />
+                                </a>
+                                <a href={socialMediaLinks.linkedin} target="blank" style={{ textDecoration: 'none', width: 60, display: 'inline-flex', justifyContent: 'center' }}>
+                                    <img src={linkedInIcon} alt="LinkedIn" style={{ width: 50, height: 50 }} />
+                                </a>
+                                <a href={socialMediaLinks.facebook} target="blank" style={{ textDecoration: 'none', width: 60, display: 'inline-flex', justifyContent: 'center' }}>
+                                    <img src={facebbokIcon} alt="Facebook" style={{ width: 50, height: 50 }} />
+                                </a>
                             </Grid>
                         </Grid>
 

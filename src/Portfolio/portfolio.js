@@ -9,22 +9,10 @@ const about = {
 
 // Your Social Media Link
 const socialMediaLinks = {
-    github: {
-        icon: <img src={require("../Assets/Images/github (1).svg")} alt="github" />,
-        link: "https://github.com/Talha619"
-    },
-    linkedin: {
-        icon: <img src={require("../Assets/Images/linkedin.svg")} alt="linkedin" />,
-        link: "https://www.linkedin.com/in/hafiz-talha/"
-    },
-    gmail: {
-        icon: null,
-        link: "hafiz.talhakh@gmail.com"
-    },
-    facebook: {
-        icon: <img src={require("../Assets/Images/facebook.svg")} alt="facebook" />,
-        link: "https://www.facebook.com/hafiz.talha.50"
-    }
+    github: "https://github.com/Talha619",
+    linkedin: "https://www.linkedin.com/in/hafiz-talha/",
+    gmail: "hafiz.talhakh@gmail.com",
+    facebook: "https://www.facebook.com/hafiz.talha.50"
     // Instagram and Twitter are also supported in the links!
 };
 
