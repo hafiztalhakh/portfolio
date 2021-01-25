@@ -6,7 +6,7 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 
-import { contactInfo } from "../../../Portfolio/portfolio";
+import { contactInfo, about, socialMediaLinks } from "../../../Portfolio/portfolio";
 
 const styles = makeStyles(theme => ({
     textContainer: {
@@ -98,7 +98,7 @@ export default function GithubProfileCard({ prof }) {
                                 <Link className={mainName} to='/'>
                                     <Typography variant="h6" id="my-logo" className="developer-name">
                                         &lt;
-                                        Talha Khalid
+                                       {about.developerName}
                                         /&gt;
                                 </Typography>
                                 </Link>
@@ -120,23 +120,26 @@ export default function GithubProfileCard({ prof }) {
                                         <PhoneIcon className={icons} />
                                     </ListItemIcon>
                                     <ListItemText primary={
-                                        <a href="tel:03362502067" className={contactLinks}>03362502067</a>
+                                        <a href={`tel:${contactInfo.number}`} className={contactLinks}>{contactInfo.number}</a>
                                     } />
                                 </ListItem>
-                                <ListItem disableGutters>
-                                    <ListItemIcon className={listItemIcon}>
-                                        <PhoneIcon className={icons} />
-                                    </ListItemIcon>
-                                    <ListItemText primary={
-                                        <a href="tel:03040438807" className={contactLinks}>03040438807</a>
-                                    } />
-                                </ListItem>
+                                {
+                                    contactInfo.number2 &&
+                                    <ListItem disableGutters>
+                                        <ListItemIcon className={listItemIcon}>
+                                            <PhoneIcon className={icons} />
+                                        </ListItemIcon>
+                                        <ListItemText primary={
+                                            <a href={`tel:${contactInfo.number2}`} className={contactLinks}>{contactInfo.number2}</a>
+                                        } />
+                                    </ListItem>
+                                }
                                 <ListItem disableGutters>
                                     <ListItemIcon className={listItemIcon}>
                                         <EmailIcon className={icons} />
                                     </ListItemIcon>
                                     <ListItemText primary={
-                                        <a href="mailto:hafiz.talhakh@gmail.com" className={contactLinks}>hafiz.talhakh@gmail.com</a>
+                                        <a href={`mailto:${contactInfo.email}`} className={contactLinks}>{contactInfo.email}</a>
                                     } />
                                 </ListItem>
                                 {prof.location !== null &&
@@ -150,6 +153,13 @@ export default function GithubProfileCard({ prof }) {
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <p className={contactMe}>Follow Me</p>
+                                <Grid container>
+                                    <Grid item xs={12} sm={4}>
+                                        {socialMediaLinks.gith}
+                                    </Grid>
+                                    <Grid item xs={12} sm={4}></Grid>
+                                    <Grid item xs={12} sm={4}></Grid>
+                                </Grid>
                             </Grid>
                         </Grid>
 
