@@ -56,10 +56,10 @@ export default function Projects() {
     const [repo, setrepo] = useState([]);
 
     useEffect(() => {
-        // getRepoData();
+        getRepoData();
     }, []);
 
-    function getRepoData() {
+    const getRepoData = () => {
         const client = new ApolloClient({
             uri: "https://api.github.com/graphql",
             request: (operation) => {

@@ -7,19 +7,27 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Project1 from '../../../Assets/Project Images/Project1.png';
 
 const styles = theme => ({
-    mainHeading: {
-        fontSize: 32,
+    sectionTitleContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 30
+    },
+    sectionTitle: {
+        color: '#fff',
+        fontSize: 36,
+        textAlign: 'center'
+    },
+    underline: {
+        backgroundColor: '#087059',
+        height: 5,
+        borderRadius: 40
     },
     displayCenter: {
         display: "flex",
         justifyContent: "center",
         width: "100%",
         alignItems: "center",
-    },
-    underlineStyle: {
-        background: "#0096C7",
-        height: "4px",
-        borderRadius: 30,
     },
     image: {
         width: "100%",
@@ -46,43 +54,39 @@ class Projects extends Component {
     render() {
         const { classes } = this.props;
         const {
-            mainHeading,
-            displayCenter,
-            underlineStyle,
+            sectionTitleContainer,
+        sectionTitle,
+        underline,
             image,
             description,
         } = classes;
 
         return (
-            <>
-                <div className={displayCenter}>
-                    <Typography className={mainHeading}>
+            <Container maxWidth="lg" style={{ marginTop: 60 }}>
+                <div className={sectionTitleContainer}>
+                    <h1 className={sectionTitle}>
                         PROJECTS
-                        <div className={underlineStyle}>
-
-                        </div>
-                    </Typography>
+                            <div className={underline} />
+                    </h1>
                 </div>
-                <Container maxWidth="lg" style={{ marginTop: 60 }}>
-                    <AliceCarousel
-                        mouseTracking
-                        items={
-                            projects.map((project, index) => {
-                                return (
-                                    <div>
-                                        <img src={project.img} alt={index} className={image} draggable={false} />
-                                        <Typography className={description}>
-                                            {project.description}
-                                        </Typography>
-                                    </div>
-                                )
-                            })
-                        }
-                        responsive={responsive}
-                        disableButtonsControls
-                    />
-                </Container>
-            </>
+                <AliceCarousel
+                    mouseTracking
+                    items={
+                        projects.map((project, index) => {
+                            return (
+                                <div>
+                                    <img src={project.img} alt={index} className={image} draggable={false} />
+                                    <Typography className={description}>
+                                        {project.description}
+                                    </Typography>
+                                </div>
+                            )
+                        })
+                    }
+                    responsive={responsive}
+                    disableButtonsControls
+                />
+            </Container>
         );
     }
 }
