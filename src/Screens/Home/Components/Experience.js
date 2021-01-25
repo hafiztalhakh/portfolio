@@ -31,7 +31,7 @@ const styles = makeStyles(theme => ({
         backgroundColor: '#171717',
         color: '#fff',
         boxShadow: '10px 20px 30px #0000004D',
-
+        minHeight: 430
     },
     displayCenter: {
         display: "flex",
@@ -123,31 +123,29 @@ export default function Experience() {
                     data.map((el, i) => (
                         <Grid item sm={12} md={6}>
                             <Paper elevation={3} className={paper}>
-                                <Grid container style={{ height: "100%" }}>
-                                    <Grid item xs={12} className={displayCenter}>
-                                        <img src={el.img} alt={el.experienceName} className={orgImg} />
-                                    </Grid>
-                                    <Grid item xs={12} className={displayCenter}>
-                                        <h4 className={jobTitle}>
-                                            {el.experienceName}
-                                        </h4>
-                                    </Grid>
-                                    <Grid item xs={12} className={displayCenter}>
-                                        <Typography className={occupationTitle}>
-                                            {el.experienceOccup}
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item xs={12} className={displayCenter}>
-                                        <Typography className={experienceDate}>
-                                            {el.experienceDate}
-                                        </Typography>
-                                    </Grid>
-                                    <Grid item xs={12} className={displayCenter}>
-                                        <Typography className={text}>
-                                            {el.experienceDetails}
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
+                                <div className={displayCenter}>
+                                    <img src={el.img} alt={el.experienceName} className={orgImg} />
+                                </div>
+                                <div className={displayCenter}>
+                                    <h4 className={jobTitle}>
+                                        {el.experienceName}
+                                    </h4>
+                                </div>
+                                <div className={displayCenter}>
+                                    <Typography className={occupationTitle}>
+                                        {el.experienceOccup}
+                                    </Typography>
+                                </div>
+                                <div className={displayCenter}>
+                                    <Typography className={experienceDate}>
+                                        {el.experienceDate}
+                                    </Typography>
+                                </div>
+                                <div className={displayCenter}>
+                                    <Typography className={text}>
+                                        {el.experienceDetails}
+                                    </Typography>
+                                </div>
                             </Paper>
                         </Grid>
                     ))
