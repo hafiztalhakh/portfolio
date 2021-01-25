@@ -43,9 +43,9 @@ function Home() {
             <div className={classes.paddingBlock} />
             <Proficiency />
             <div className={classes.paddingBlock} />
-            <Projects />
-            <div className={classes.paddingBlock} />
             <GithubRepo />
+            <div className={classes.paddingBlock} />
+            <Projects />
         </Fragment >
     );
 }
