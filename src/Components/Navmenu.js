@@ -91,19 +91,19 @@ class Drawer extends Component {
                         <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/') }}>
                             <ListItemText primary="About" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#skills') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/skills') }}>
                             <ListItemText primary="Skills" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#education') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/education') }}>
                             <ListItemText primary="Education" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#experience') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/experience') }}>
                             <ListItemText primary="Experience" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#projects') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/projects') }}>
                             <ListItemText primary="Projects" />
                         </ListItem>
-                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/#contact') }}>
+                        <ListItem button className={classes.listItem} onClick={() => { this.handleButtonPress('/contact') }}>
                             <ListItemText primary="Contact" />
                         </ListItem>
                     </List>
