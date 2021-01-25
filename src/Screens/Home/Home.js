@@ -26,24 +26,30 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-function Home() {
+function Home(props) {
     const classes = useStyles();
     const theme = useTheme();
     const mediumScreens = useMediaQuery(theme.breakpoints.up('md'));
+    const {
+        SKillsRef,
+        EducationRef,
+        ExperienceRef,
+        ProjectsRef
+    } = props;
 
     return (
         <Fragment>
             <About />
-            <div className={classes.paddingBlock} />
+            <div ref={SKillsRef} className={classes.paddingBlock} />
             <Skills />
-            <div className={classes.paddingBlock} />
+            <div ref={EducationRef} className={classes.paddingBlock} />
             <Education />
-            <div className={classes.paddingBlock} />
+            <div ref={ExperienceRef} className={classes.paddingBlock} />
             <Experience />
             <div className={classes.paddingBlock} />
             <Proficiency />
-            <div className={classes.paddingBlock} />
-            <GithubRepo />
+            <div ref={ProjectsRef} className={classes.paddingBlock} />
+            <GithubRepo ref={SKillsRef} />
             <div className={classes.paddingBlock} />
             <Projects />
         </Fragment >

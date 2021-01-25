@@ -27,6 +27,42 @@ function Layout() {
     const classes = useStyles();
     const theme = useTheme();
     const mediumScreens = useMediaQuery(theme.breakpoints.up('md'));
+    // const HomeRef = React.useRef(null);
+    const SKillsRef = React.useRef(null);
+    const EducationRef = React.useRef(null);
+    const ExperienceRef = React.useRef(null);
+    const ProjectsRef = React.useRef(null);
+    const ContactRef = React.useRef(null);
+
+    React.useEffect(() => {
+
+        if (window.location.pathname === '/') {
+            window.scrollTo(0, 0);
+        }
+        else if (window.location.pathname === '/skills') {
+            scrollToRef(SKillsRef);
+        }
+        else if (window.location.pathname === '/education') {
+            scrollToRef(EducationRef);
+        }
+        else if (window.location.pathname === '/experience') {
+            scrollToRef(ExperienceRef);
+        }
+        else if (window.location.pathname === '/projects') {
+            scrollToRef(ProjectsRef);
+        }
+        else if (window.location.pathname === '/contact') {
+            scrollToRef(ContactRef);
+        }
+    });
+
+    const scrollToRef = (ref) => {
+        window.scrollTo({
+            top: ref.current.offsetTop,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
 
     return (
         <Fragment>
@@ -38,8 +74,13 @@ function Layout() {
             }
 
             <div className={classes.paddingBlockTop} />
-            <Home />
-            <div className={classes.paddingBlock} />
+            <Home
+                SKillsRef={SKillsRef}
+                EducationRef={EducationRef}
+                ExperienceRef={ExperienceRef}
+                ProjectsRef={ProjectsRef}
+            />
+            <div ref={ContactRef} className={classes.paddingBlock} />
             <Footer />
         </Fragment >
     );
