@@ -53,7 +53,7 @@ Generate a Github personal access token using these [Instructions](https://help.
 
 Set `showGithubProfile` to true or false to show Contact Profile using Github, defaults to false.
 
-#### Personalize page content in `/src/portfolio.js` & modify it as per your need.
+#### Personalize page content in `/src/Portfolio/portfolio.js` & modify it as per your need.
 
 ## Technologies used 🛠️
 
