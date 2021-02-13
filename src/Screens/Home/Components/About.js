@@ -49,7 +49,7 @@ const styles = makeStyles(theme => ({
         lineHeight: 1.8
     },
     btn: {
-        backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #087059 0%, rgb(119 115 14 / 71%) 100%)',
+        backgroundImage: `linear-gradient(90deg, rgb(2, 0, 36) 0%, ${customColorTheme.primaryColor} 0%, rgb(119 115 14 / 71%) 100%)`,
         color: customColorTheme.defaultColor,
         width: 180,
         padding: '15px 30px',

@@ -19,7 +19,7 @@ import Project1 from '../Assets/Project Images/Project1.png';
 import pic1 from '../Assets/Work/logo.jpg'
 
 const customColorTheme = {
-    primaryColor: "#087059",
+    primaryColor: "#00bbf9",
     secondaryColor: '#646464',
     defaultColor: '#ffffff',
     backgroundColor: "#171717"
