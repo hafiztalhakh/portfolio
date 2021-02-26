@@ -33,11 +33,11 @@ const Navbar = () => {
                         <div className="navigations">
                             <ul>
                                 <li> <Link className='navLinks underline' to='/'>About</Link> </li>
-                                <li> <Link className='navLinks underline' to='/skills'>Skills</Link> </li>
-                                <li> <Link className='navLinks underline' to='/education'>Education</Link> </li>
-                                <li> <Link className='navLinks underline' to='/experience'>Experience</Link> </li>
-                                <li> <Link className='navLinks underline' to='/projects'>Projects</Link> </li>
-                                <li> <Link className='navLinks underline' to='/contact'>Contact</Link> </li>
+                                <li> <a className='navLinks underline' href='#skills'>Skills</a> </li>
+                                <li> <a className='navLinks underline' href='#education'>Education</a> </li>
+                                <li> <a className='navLinks underline' href='#experience'>Experience</a> </li>
+                                <li> <a className='navLinks underline' href='#projects'>Projects</a> </li>
+                                <li> <a className='navLinks underline' href='#contact'>Contact</a> </li>
                             </ul>
                         </div>
                     </div>
