@@ -58,7 +58,7 @@ export default function Proficiency() {
         <Container maxWidth="md" style={{ marginTop: 60 }}>
             <div className={sectionTitleContainer}>
                 <h1 className={sectionTitle}>
-                    PROFICIENCY
+                    Proficiency
                 <div className={underline} />
                 </h1>
             </div>

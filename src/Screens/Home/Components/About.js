@@ -3,7 +3,7 @@ import { Container, Grid, makeStyles, useTheme, useMediaQuery } from '@material-
 import { withRouter } from 'react-router-dom';
 import { Fade } from "react-reveal";
 
-import Image01 from '../../../Assets/Images/Group 34.png';
+import Image01 from '../../../Assets/Images/Group 34.svg';
 import { customColorTheme, about } from '../../../Portfolio/portfolio';
 
 const styles = makeStyles(theme => ({
@@ -21,11 +21,11 @@ const styles = makeStyles(theme => ({
         fontWeight: 'bold',
         wordSpacing: 9,
         transform: 'rotate(-90deg)',
-        top: 230,
+        top: 320,
         left: -40,
-        "& :after": {
+        "&:after": {
             margin: "margin: 20px auto 0px",
-            content: "",
+            content: "''",
             display: 'block',
             height: 7,
             width: '100%',
@@ -49,7 +49,7 @@ const styles = makeStyles(theme => ({
         lineHeight: 1.8
     },
     btn: {
-        backgroundImage: `linear-gradient(90deg, rgb(2, 0, 36) 0%, ${customColorTheme.primaryColor} 0%, rgb(119 115 14 / 71%) 100%)`,
+        backgroundImage: `linear-gradient(90deg, rgb(2, 0, 36) 0%, ${customColorTheme.primaryColor} 0%, rgb(94 34 3 / 100%) 100%)`,
         color: customColorTheme.defaultColor,
         width: 180,
         padding: '15px 30px',
@@ -86,7 +86,7 @@ const About = () => {
     return (
         <Container maxWidth="lg">
             {
-                mediumScreens && <h1 className="title-left">Introduction</h1>
+                mediumScreens && <h1 className={title}>Introduction</h1>
             }
             <Grid contaienr style={{
                 display: "flex",

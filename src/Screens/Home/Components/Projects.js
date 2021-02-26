@@ -79,7 +79,7 @@ export default function Projects() {
         <Container maxWidth="lg" style={{ marginTop: 60 }}>
             <div className={sectionTitleContainer}>
                 <h1 className={sectionTitle}>
-                    PROJECTS
+                    Projects
                         <div className={underline} />
                 </h1>
             </div>

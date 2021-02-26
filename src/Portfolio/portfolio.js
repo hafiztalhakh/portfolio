@@ -19,7 +19,9 @@ import Project1 from '../Assets/Project Images/Project1.png';
 import pic1 from '../Assets/Work/logo.jpg'
 
 const customColorTheme = {
-    primaryColor: "#00bbf9",
+    // primaryColor: "#595757",
+    // primaryColor: "#087059",
+    primaryColor: "#ffff00",
     secondaryColor: '#646464',
     defaultColor: '#ffffff',
     backgroundColor: "#171717"
@@ -217,7 +219,7 @@ const socialMediaLinks = {
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
 const openSource = {
-    githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
+    githubConvertedToken: atob(process.env.REACT_APP_GITHUB_TOKEN),
     githubUserName: "Talha619", // Change to your github username to view your profile in Contact Section.
     showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to false 
 };

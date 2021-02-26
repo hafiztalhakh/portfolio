@@ -33,11 +33,11 @@ const styles = makeStyles(theme => ({
         alignItems: "center",
     },
     btn: {
-        backgroundImage: 'linear-gradient(90deg, rgb(2, 0, 36) 0%, #087059 0%, rgb(119 115 14 / 71%) 100%)',
+        backgroundImage: `linear-gradient(90deg, rgb(2, 0, 36) 0%, ${customColorTheme.primaryColor} 0%, rgb(94 34 3 / 100%) 100%)`,
         color: customColorTheme.defaultColor,
         width: 180,
-        padding: 10,
-        marginTop: 30,
+        padding: '15px 30px',
+        marginTop: 50,
         textDecoration: 'none',
         textTransform: 'uppercase',
         borderRadius: 4,
@@ -59,9 +59,11 @@ export default function Projects() {
 
     useEffect(() => {
         getRepoData();
+
     }, []);
 
     const getRepoData = () => {
+
         const client = new ApolloClient({
             uri: "https://api.github.com/graphql",
             request: (operation) => {
@@ -107,7 +109,10 @@ export default function Projects() {
             .then((result) => {
                 setrepoFunction(result.data.user.pinnedItems.edges);
                 // console.log(result);
-            });
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     function setrepoFunction(array) {
@@ -116,7 +121,7 @@ export default function Projects() {
 
     return (
         <Fade bottom duration={1000} distance="20px">
-            <Container maxWidth="lg" id="opensource">
+            <Container maxWidth="lg">
                 <div className={sectionTitleContainer}>
                     <h1 className={sectionTitle}>
                         Open Source Projects

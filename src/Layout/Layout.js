@@ -39,19 +39,19 @@ function Layout() {
         if (window.location.pathname === '/') {
             window.scrollTo(0, 0);
         }
-        else if (window.location.pathname === '/skills') {
+        else if (window.location.pathname === '/portfolio/skills') {
             scrollToRef(SKillsRef);
         }
-        else if (window.location.pathname === '/education') {
+        else if (window.location.pathname === '/portfolio/education') {
             scrollToRef(EducationRef);
         }
-        else if (window.location.pathname === '/experience') {
+        else if (window.location.pathname === '/portfolio/experience') {
             scrollToRef(ExperienceRef);
         }
-        else if (window.location.pathname === '/projects') {
+        else if (window.location.pathname === '/portfolio/projects') {
             scrollToRef(ProjectsRef);
         }
-        else if (window.location.pathname === '/contact') {
+        else if (window.location.pathname === '/portfolio/contact') {
             scrollToRef(ContactRef);
         }
     });
