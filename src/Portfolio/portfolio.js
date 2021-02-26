@@ -9,6 +9,7 @@ import SqlDatabase from '../Assets/Images/sql-database.svg';
 import CSSIcon from '../Assets/Images/css-3.svg';
 import GithubIcon from '../Assets/Images/github.svg';
 import JavascriptIcon from '../Assets/Images/javascript.svg';
+import FirebaseIcon from '../Assets/Images/firebase.svg';
 
 import KULogo from '../Assets/Images/Group 29.png';
 import JouharDegree from '../Assets/Images/jouhar.jpg';
@@ -19,8 +20,6 @@ import Project1 from '../Assets/Project Images/Project1.png';
 import pic1 from '../Assets/Work/logo.jpg'
 
 const customColorTheme = {
-    // primaryColor: "#595757",
-    // primaryColor: "#087059",
     primaryColor: "#ffff00",
     secondaryColor: '#646464',
     defaultColor: '#ffffff',
@@ -52,20 +51,20 @@ const skillSet = [
         icon: NodeIcon,
     },
     {
-        skill: "React Native",
-        icon: ReactIcon,
-    },
-    {
         skill: "Mongoose",
         icon: null,
+    },
+    {
+        skill: "Firebase",
+        icon: FirebaseIcon
     },
     {
         skill: "SQL Database",
         icon: SqlDatabase,
     },
     {
-        skill: "Javascript",
-        icon: JavascriptIcon,
+        skill: "Github",
+        icon: GithubIcon,
     },
     {
         skill: "HTML",
@@ -76,8 +75,12 @@ const skillSet = [
         icon: CSSIcon,
     },
     {
-        skill: "Github",
-        icon: GithubIcon,
+        skill: "Javascript",
+        icon: JavascriptIcon,
+    },
+    {
+        skill: "React Native",
+        icon: ReactIcon,
     },
 ];
 
@@ -153,16 +156,16 @@ const proficiency = [
         level: 85,
     },
     {
-        name: "React Native",
-        level: 70,
+        name: "Firebase",
+        level: 75,
     },
     {
         name: "SQL Database",
         level: 65,
     },
     {
-        name: "Javascript",
-        level: 95,
+        name: "Github",
+        level: 80,
     },
     {
         name: "HTML",
@@ -173,8 +176,13 @@ const proficiency = [
         level: 87,
     },
     {
-        name: "Github",
-        level: 80,
+        name: "Javascript",
+        level: 95,
+    },
+   
+    {
+        name: "React Native",
+        level: 70,
     },
 ];
 
