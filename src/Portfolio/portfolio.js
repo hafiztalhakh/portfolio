@@ -217,8 +217,8 @@ const projects = [
 
 // Your Social Media Link
 const socialMediaLinks = {
-    github: "https://github.com/Talha619",
-    linkedin: "https://www.linkedin.com/in/hafiz-talha/",
+    github: "https://github.com/hafiztalhakh",
+    linkedin: "https://www.linkedin.com/in/hafiztalhakh/",
     gmail: "hafiz.talhakh@gmail.com",
     facebook: "https://www.facebook.com/hafiz.talha.50"
     // Instagram and Twitter are also supported in the links!
@@ -228,7 +228,7 @@ const socialMediaLinks = {
 To know how to get github key look at readme.md */
 const openSource = {
     githubConvertedToken: atob(process.env.REACT_APP_GITHUB_TOKEN),
-    githubUserName: "Talha619", // Change to your github username to view your profile in Contact Section.
+    githubUserName: "hafiztalhakh", // Change to your github username to view your profile in Contact Section.
     showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to false 
 };
 
