@@ -14,10 +14,21 @@ import FirebaseIcon from '../Assets/Images/firebase.svg';
 import KULogo from '../Assets/Images/Group 29.png';
 import JouharDegree from '../Assets/Images/jouhar.jpg';
 import TheEducators from '../Assets/Images/the-educators-1.jpg';
+import Iqra from '../Assets/Images/Iqra.png';
 import Freelancing from '../Assets/Images/freelancing.svg';
-import TechNest from '../Assets/Images/logo-white.jpg';
-import Project1 from '../Assets/Project Images/Project1.png';
-import pic1 from '../Assets/Work/logo.jpg'
+import noviaLogo from '../Assets/Images/2.png';
+// import Project1 from '../Assets/Project Images/Project1.png';
+import lis from '../Assets/Project Images/lis.png'
+import edhi from '../Assets/Project Images/edhi.png'
+import foodghar from '../Assets/Project Images/foodghar.png'
+import hazirsain from '../Assets/Project Images/hazirsain.png'
+import novia from '../Assets/Project Images/novia.png'
+import shaheerenterprises from '../Assets/Project Images/shaheerenterprises.png'
+import yeo from '../Assets/Project Images/yeo.png'
+import ecommerce from '../Assets/Project Images/ecommerce.png'
+import giverpays from '../Assets/Project Images/giverpays.png'
+
+
 
 const customColorTheme = {
     primaryColor: "#ffff00",
@@ -30,7 +41,7 @@ const customColorTheme = {
 const about = {
     developerName: "Talha Khalid",
     aboutText: "A passionate Software Developer having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.",
-    resumeLink: "https://drive.google.com/file/d/1l2M26CSgU5Wew6K-LWZulxCxXdiIkOib/view?usp=sharing"
+    resumeLink: "https://drive.google.com/file/d/1Z_Z2Y02xFVgXK-ps8HieBZBrexMF7pdd/view?usp=sharing"
 };
 
 const skillSet = [
@@ -89,54 +100,50 @@ const education = [
     {
         institute: "University of Karachi",
         img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqJbygFbHKsmbRig9tI1e1gNM5RI1qspw1gw&usqp=CAU',
-        duration: "January 2017 - January 2021",
+        duration: "2017 - 2020",
         degree: "Bachelor Of Science In Computer Science",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        description: `I have done bachelor's in Software Engineering from UBIT, University of Karachi.`
     },
     {
         img: JouharDegree,
         institute: "PECHS Edu Found Govt Sci College",
         degree: "Pre-Engineering",
         duration: "2013 - 2016",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        description: "I have done my intermediate in Pre-Engineering from Karachi Board."
     },
     {
         img: TheEducators,
         institute: "The Educators",
         degree: "Matriculation",
-        duration: "2001 - 2013",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        duration: "2011 - 2013",
+        description: "I have done my matric in Science from Karachi Board and I got 78% marks in it."
     },
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSqJbygFbHKsmbRig9tI1e1gNM5RI1qspw1gw&usqp=CAU',
-        institute: "University of Karachi",
-        degree: "Bachelor Of Science In Computer Science",
-        duration: "January 2017 - January 2021",
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        img: Iqra,
+        institute: "Iqra Tarbiat-ul-Atfal",
+        degree: "Hifz-e-Quran",
+        duration: "2002 - 2011",
+        description: "I have memorize Quran from Iqra Tarbiat-ul-Atfal and studied till class viii in this School."
     },
 ];
 
 //Your Experience
 const experience = [
     {
-        img: Freelancing,
-        experienceName: "FREELANCING",
-        experienceOccup: "FULL STACK DEVELOPER",
-        experienceDate: "JUNE 2019 - Present",
-        experienceDetails: `
-        Creating rich proefssional web applications
-        Created various Portfolio websites
-        CRM Development`,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbJzKHLvi5aWKL-G-60E7zz8RT8Lvap2CGjQ&usqp=CAU",
+        experienceName: "ICI Pakistan ltd.",
+        experienceOccup: "Information Technology Intern",
+        experienceDate: "January 2019 - February 2019",
+        experienceDetails: `I have experience of working in IT Department of ICI Pakistan limited as an IT Intern. Where I learnt about MS Office 365 services i.e SharePoint, One Drive for Business, etc.
+        Where, I have created Web Pages, sites, Document Libraries, Apps, Groups, Workflows in SharePoint and also I am a part of an endeavor i.e Migration from Local File server to SharePoint Online (Cloud).`,
     },
     {
-        img: TechNest,
-        experienceName: "TechNest",
+        img: noviaLogo,
+        experienceName: "Novia Technologies",
         experienceOccup: "SOFTWARE ENGINEER",
-        experienceDate: "JUNE 2019 - 2020",
-        experienceDetails: `
-        Designs and creates professional web applications
-        Checks feasibility of software prototypes
-        Modifies code to fix errors`,
+        experienceDate: "June 2019 - Present",
+        experienceDetails: `Started as a Junior Web Developer and today I am working as a MERN Stack Developer and leading my team.
+        My Key Responsibilities in Novia Technologies are developing complete platforms from start to end. Managing existing projects. Creating complete application architecture and design. Developing React applications using material-ui and ant design. Developing REST APIs. Developing Hybrid apps.`,
     },
 ];
 
@@ -145,23 +152,23 @@ const experience = [
 const proficiency = [
     {
         name: "ReactJS",
-        level: 95,
+        level: 80,
     },
     {
         name: "NodeJS/Express",
-        level: 90,
+        level: 70,
     },
     {
         name: "MongoDB/Mongoose",
-        level: 85,
+        level: 70,
     },
     {
         name: "Firebase",
-        level: 75,
+        level: 70,
     },
     {
         name: "SQL Database",
-        level: 65,
+        level: 70,
     },
     {
         name: "Github",
@@ -173,45 +180,65 @@ const proficiency = [
     },
     {
         name: "CSS3",
-        level: 87,
+        level: 80,
     },
     {
         name: "Javascript",
-        level: 95,
+        level: 70,
     },
-   
+
     {
         name: "React Native",
-        level: 70,
+        level: 60,
     },
 ];
 
 //Your Projects
 const projects = [
     {
-        img: pic1,
-        workName: "Giverpays",
-        link: "https://giverpays.com/"
+        img: lis,
+        workName: "Laboratory Information System",
+        // link: ""
     },
     {
-        img: Project1,
-        workName: "Yout Event Organizer",
-        link: "https://youtheventorganizer.com/"
+        img: edhi,
+        workName: "Edhi Website",
+        // link: ""
     },
     {
-        img: Project1,
-        workName: "LIS for PCMD - ICCBS",
-        link: "https://pcmd-lab.herokuapp.com/"
+        img: foodghar,
+        workName: "Foodghar",
+        // link: ""
     },
     {
-        img: Project1,
+        img: shaheerenterprises,
         workName: "Shaheer Enterprises",
-        link: "https://shaheerenterprises.com/"
+        // link: "https://shaheerenterprises.com/"
     },
     {
-        img: Project1,
+        img: hazirsain,
         workName: "Hazir Sain",
-        link: "https://hazirsain.com/"
+        // link: "https://hazirsain.com/"
+    },
+    {
+        img: novia,
+        workName: "Novia Technologies",
+        // link: ""
+    },
+    {
+        img: yeo,
+        workName: "Youth Event Organizer",
+        // link: ""
+    },
+    {
+        img: ecommerce,
+        workName: "Computer Store",
+        // link: ""
+    },
+    {
+        img: giverpays,
+        workName: "GiverPays",
+        // link: ""
     },
 ];
 
@@ -227,7 +254,7 @@ const socialMediaLinks = {
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
 const openSource = {
-    githubConvertedToken: atob(process.env.REACT_APP_GITHUB_TOKEN),
+    githubConvertedToken: process.env.REACT_APP_GITHUB_TOKEN,
     githubUserName: "hafiztalhakh", // Change to your github username to view your profile in Contact Section.
     showGithubProfile: "true" // Set true or false to show Contact profile using Github, defaults to false 
 };
