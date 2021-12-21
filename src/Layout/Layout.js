@@ -1,46 +1,52 @@
 import React, { Fragment, useEffect } from 'react';
-
-//React Router
 import { withRouter } from 'react-router-dom';
-
-//Material UI
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useMediaQuery, useTheme } from '@material-ui/core';
 
 //Components
 import Navbar from '../Components/Navbar';
-import About from '../Components/About';
-import Skills from '../Components/Skills';
-import Education from '../Components/Education';
+import NavMenu from '../Components/Navmenu';
+import Home from '../Screens/Home/Home';
+import Footer from '../Components/Footer/Footer';
 
-const styles = makeStyles(theme => ({
-    desktop: {
-        display: 'block',
-        [theme.breakpoints.down('sm')]: {
-            display: 'none',
-        },
+const useStyles = makeStyles(theme => ({
+    paddingBlockTop: {
+        height: 100,
+        [theme.breakpoints.up('md')]: {
+            height: 0
+        }
     },
-    mobile: {
-        display: 'none',
-        [theme.breakpoints.down('sm')]: {
-            display: 'block'
-        },
+    paddingBlock: {
+        height: 100,
+        [theme.breakpoints.up('md')]: {
+            height: 200
+        }
     }
 }));
 
 function Layout() {
+    const classes = useStyles();
+    const theme = useTheme();
+    const mediumScreens = useMediaQuery(theme.breakpoints.up('md'));
 
-    const classes = styles();
+    useEffect(() => {
+        if (window.location.pathname === '/') {
+            window.scrollTo(0, 0);
+        }
+    });
 
     return (
         <Fragment>
-            <Navbar />
-           <div style={{height: 80}} />
-            <About />
-            <div style={{height: 100}} />
-            <Skills />
-            <div style={{height: 50}} />
-            <Education />
-            <div style={{height: 500}} />
+            {
+                mediumScreens ?
+                    <Navbar />
+                    :
+                    <NavMenu />
+            }
+
+            <div className={classes.paddingBlockTop} />
+            <Home />
+            <div id="contact" className={classes.paddingBlock} />
+            <Footer />
         </Fragment >
     );
 }
