@@ -261,8 +261,7 @@ const openSource = {
 
 const contactInfo = {
     subtitle: "Discuss a project or just want to say hi? My Inbox is open for all.",
-    number: "+923362502067",
-    number2: "+923040438807",
+    number: "+92 304 0438807",
     email: "hafiz.talhakh@gmail.com"
 };
 
